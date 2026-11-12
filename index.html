@@ -954,7 +954,9 @@ document.addEventListener('click',e=>{const a=e.target.closest('[data-sms]');if(
 const tip=document.createElement('div');tip.className='calltip';tip.hidden=true;document.body.appendChild(tip);
 function showTip(kind,body){tip.innerHTML=`<b>${kind==='tel'?'전화':'문자'}가 바로 열리지 않으면</b><span>010-6337-3652</span><div><button class="pill white" id="ctCopy">${kind==='tel'?'번호 복사':'번호·내용 복사'}</button><button class="pill line-w" id="ctX">닫기</button></div>`;tip.hidden=false;
   $('ctCopy').onclick=async()=>{try{await navigator.clipboard.writeText(kind==='tel'?'010-6337-3652':'010-6337-3652\n'+(body||''));$('ctCopy').textContent='복사했어요'}catch(_){}};$('ctX').onclick=()=>tip.hidden=true;clearTimeout(tip._t);tip._t=setTimeout(()=>tip.hidden=true,12000)}
-document.addEventListener('click',e=>{const a=e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(!a)return;const sms=a.href.startsWith('sms:');showTip(sms?'sms':'tel',sms?decodeURIComponent((a.href.split('body=')[1]||'')):'')});
+const SANDBOX=/claude/.test(location.hostname);
+if(!SANDBOX){$('sendSms').removeAttribute('target');$('iSms').removeAttribute('target')}
+document.addEventListener('click',e=>{if(!SANDBOX)return;const a=e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(!a)return;const sms=a.href.startsWith('sms:');showTip(sms?'sms':'tel',sms?decodeURIComponent((a.href.split('body=')[1]||'')):'')});
 
 /* ===== data pages ===== */
 const getJSON=p=>fetch(p,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
