@@ -393,6 +393,12 @@ img{-webkit-user-drag:none;pointer-events:auto}
 .totop span{font-size:9px;letter-spacing:.12em;margin-top:-1px}
 .totop:hover{background:#222;transform:translateY(-2px)}
 @media (max-width:760px){.totop{right:14px;bottom:70px;width:46px;height:46px}}
+.wm{display:none}
+.stks{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}.stks:empty{display:none}
+.stk{display:inline-block;font-size:11px;line-height:1.5;padding:1px 7px;border-radius:2px;background:#eaf6ee;color:#0a7d34;font-weight:500;white-space:nowrap}
+.stk.wait{background:#f2f2f2;color:#555}
+.stk.low{background:#fdecec;color:#c62828}
+@media (max-width:760px){.wf{display:none}.wm{display:inline}}
 /* Footer */
 .ft{background:#000;color:#bdbdbd;padding:70px 0 110px;font-size:13px}
 .ft .top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid #262626;flex-wrap:wrap}
@@ -1013,7 +1019,20 @@ let PROMO=null,STOCK=null,MOU=null,REPORT=null;
 
 /* price */
 let pCat='all',pYear='27년식';
-const wn=v=>v==null?'-':Math.round(v).toLocaleString('ko-KR')+'원';
+const wn=v=>v==null?'-':`<span class="wf">${Math.round(v).toLocaleString('ko-KR')}원</span><span class="wm">${Math.round(v/1000)/10}만원</span>`;
+/* 재고 → 출고 시기 */
+const snk=s=>String(s).toLowerCase().replace(/\((?:[a-z]\d{3}|cy\d+\/\d+)\)/g,'').replace(/mercedes-amg/g,'amg').replace(/mercedes-maybach/g,'maybach').replace(/4matic\+?/g,'').replace(/airmatic®?/g,'').replace(/coupé/g,'coupe').replace(/\bexcl\b/g,'exclusive').replace(/\bav\b/g,'avantgarde').replace(/\bswb\b/g,'').replace(/[^a-z0-9가-힣+]+/g,' ').trim().split(' ').filter(Boolean);
+const skey=t=>[...t].sort().join(' ');let SIDX=null;
+function stockFor(year,model,promoKeys){
+  if(!STOCK||!STOCK.items)return null;
+  if(!SIDX){SIDX={};for(const i of STOCK.items){const k=i.year+'|'+skey(snk(i.trim));const o=SIDX[k]||(SIDX[k]={qty:0,first:'9999-99',toks:snk(i.trim),year:i.year});o.qty+=i.qty;const f=Object.keys(i.months||{})[0];if(f&&f<o.first)o.first=f}}
+  const t=snk(model);let hit=SIDX[year+'|'+skey(t)]?[SIDX[year+'|'+skey(t)]]:Object.values(SIDX).filter(v=>v.year===year&&!promoKeys.has(year+'|'+skey(v.toks))&&t.every(x=>v.toks.includes(x))&&v.toks.filter(x=>!t.includes(x)).every(x=>x==='amg'||x==='line'));
+  if(!hit.length)return null;
+  const qty=hit.reduce((a,v)=>a+v.qty,0),first=hit.map(v=>v.first).sort()[0];
+  const now=new Date(),[y,m]=first.split('-').map(Number),d=(y*12+m)-(now.getFullYear()*12+now.getMonth()+1);
+  return{qty,wait:d<=0?0:d};
+}
+function stockBadge(st){if(!st)return'';return`<span class="stk${st.wait?' wait':''}">${st.wait?st.wait+'달 대기':'이번 달 출고 가능'}</span>${st.qty<=5?`<span class="stk low">재고 적음 · ${st.qty}대</span>`:''}`}
 function renderPrice(){
   const P=PROMO||{};const G=P.groups||[];
   $('pMonth').textContent=(P.month||'')+' · Price & Promotion';
@@ -1023,13 +1042,14 @@ function renderPrice(){
   $('pYears').innerHTML=years.map(y=>`<button data-y="${esc(y)}" class="${y===pYear?'on':''}">${esc(y)}</button>`).join('');
   const gs=G.filter(x=>x.year===pYear);
   $('pChips').innerHTML=[['all','전체'],...gs.map(x=>[x.cls,x.label])].map(([k,v])=>`<button data-k="${esc(k)}" class="${k===pCat?'on':''}">${esc(v)}</button>`).join('');
+  const PKEYS=new Set(G.flatMap(g=>g.rows.map(r=>g.year+'|'+skey(snk(r.model)))));
   const s=norm($('pq').value.trim());let n=0;
   const html=(s?G:gs).filter(x=>s||pCat==='all'||x.cls===pCat).map(x=>{const rows=x.rows.filter(r=>!s||norm(r.model).includes(s));if(!rows.length)return'';n+=rows.length;
     return`<div class="ptable"><div class="th"><h3>${esc(x.label)}</h3><small>${esc(x.year)} · ${rows.length}개 모델</small></div><table><thead><tr><th>모델</th><th>차량가</th><th>기본할인</th><th>할인 금액</th><th>예상 차량가</th><th style="text-align:left">벤츠파이낸셜 · 추가 혜택</th></tr></thead><tbody>`+
-    rows.map(r=>{const base=r.after||r.before;const fin=(r.total!=null&&base)?base-r.total:null;
+    rows.map(r=>{const st=r.edition?null:stockFor(x.year,r.model,PKEYS);const base=r.after||r.before;const fin=(r.total!=null&&base)?base-r.total:null;
       const mb=[r.mbf?`<span class="mbf">할부 금리 <em>${esc(r.mbf)}</em></span>`:'',r.lease?`<span class="mbf">운용리스 <em>${/^\d/.test(r.lease)?'추가 '+esc(r.lease):esc(r.lease)}</em></span>`:''].join('');
       const tags=[r.cq?`<span class="tagx cq">${r.cq==='EW'?'타 브랜드 보유 · 연장보증(EW)':'타 브랜드 보유 +'+esc(r.cq)}</span>`:'',r.remark?`<span class="tagx rm">${esc(r.remark)}</span>`:''].join('');
-      return`<tr><td>${esc(r.model)}${r.edition?'<span class="tagx ed" style="margin-left:6px">에디션</span>':''}</td><td>${wn(base)}</td><td>${r.rate==null?'-':r.rate?'<span class="dc">'+r.rate+'%</span>':'0%'}</td><td>${r.total?'<span class="dc">-'+wn(r.total)+'</span>':'-'}</td><td class="final">${fin!=null&&r.total?wn(fin)+'<small>기본할인 반영</small>':'<a class="sbtn" data-sms="이번 달 조건 문의: '+esc(r.model)+' ('+esc(x.year)+')">조건 받기</a>'}</td><td class="rmk">${mb}${tags||(!mb?'<span style="color:var(--muted)">-</span>':'')}</td></tr>`}).join('')+'</tbody></table></div>'}).join('');
+      return`<tr><td>${esc(r.model)}${r.edition?'<span class="tagx ed" style="margin-left:6px">에디션</span>':''}<div class="stks">${stockBadge(st)}</div></td><td>${wn(base)}</td><td>${r.rate==null?'-':r.rate?'<span class="dc">'+r.rate+'%</span>':'0%'}</td><td>${r.total?'<span class="dc">-'+wn(r.total)+'</span>':'-'}</td><td class="final">${fin!=null&&r.total?wn(fin)+'<small>기본할인 반영</small>':'<a class="sbtn" data-sms="이번 달 조건 문의: '+esc(r.model)+' ('+esc(x.year)+')">조건 받기</a>'}</td><td class="rmk">${mb}${tags||(!mb?'<span style="color:var(--muted)">-</span>':'')}</td></tr>`}).join('')+'</tbody></table></div>'}).join('');
   $('pCount').textContent=n+'개 모델';
   $('pTables').innerHTML=html||'<div class="empty">일치하는 모델이 없습니다.</div>';bindLinks($('pTables'));
 }
