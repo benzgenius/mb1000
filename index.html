@@ -389,6 +389,10 @@ img{-webkit-user-drag:none;pointer-events:auto}
 .bkpages img{width:100%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.12);min-height:200px}
 .trims td.b{white-space:nowrap}
 @media (max-width:760px){.bkbar{padding:18px 16px 8px}.bkbar h3{font-size:19px}.bkact{padding:0 16px 12px;top:70px}.bkpages{padding:8px;gap:8px}.trims td.b{white-space:normal}.trims td.b .sbtn{display:block;margin:4px 0;text-align:center;padding:6px 8px;font-size:12px}}
+.totop{position:fixed;right:24px;bottom:28px;z-index:70;width:52px;height:52px;border-radius:50%;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;box-shadow:0 4px 16px rgba(0,0,0,.25);border:1px solid #333;transition:opacity .2s,transform .2s}
+.totop span{font-size:9px;letter-spacing:.12em;margin-top:-1px}
+.totop:hover{background:#222;transform:translateY(-2px)}
+@media (max-width:760px){.totop{right:14px;bottom:70px;width:46px;height:46px}}
 /* Footer */
 .ft{background:#000;color:#bdbdbd;padding:70px 0 110px;font-size:13px}
 .ft .top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid #262626;flex-wrap:wrap}
@@ -818,6 +822,7 @@ img{-webkit-user-drag:none;pointer-events:auto}
   </div>
 </footer>
 
+<button class="totop" id="totop" aria-label="맨 위로" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span>TOP</span></button>
 <div class="fbar"><a href="tel:01063373652">전화</a><a data-booking target="_blank" rel="noopener">시승 예약</a><a data-kakao>카톡 상담</a></div>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
@@ -977,6 +982,10 @@ $('inqClose').onclick=closeInq;inq.onclick=e=>{if(e.target===inq)closeInq()};
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeInq()});
 $('iKakao').onclick=async()=>{try{await navigator.clipboard.writeText(inqText());$('iToast').textContent='복사했어요. 열리는 카톡 대화창에 붙여넣어 보내주세요.'}catch(_){$('iToast').textContent='카톡 대화창에 위 내용을 적어 보내주세요.'}if(!window.open(KAKAO,'_blank','noopener'))location.href=KAKAO};
 document.addEventListener('click',e=>{const a=e.target.closest('[data-sms]');if(!a)return;e.preventDefault();e.stopPropagation();openInq(decodeURIComponent(a.dataset.sms))},true);
+
+/* ===== 맨 위로 ===== */
+const totop=$('totop');addEventListener('scroll',()=>{totop.hidden=scrollY<600},{passive:true});
+totop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 
 /* ===== 어프로치북 보기 ===== */
 const book=$('book');let bkKey='';
