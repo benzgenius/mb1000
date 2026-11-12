@@ -207,7 +207,7 @@ form.q{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px}
 /* Catalog */
 .cat-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0 40px}
 .cat-list a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
-.cat-list a:after{content:"↗";color:var(--muted)}
+.cat-list a:after{content:"↓";color:var(--muted)}
 .cat-list a:hover{color:var(--blue)}
 
 /* Sub pages */
@@ -380,6 +380,15 @@ img{-webkit-user-drag:none;pointer-events:auto}
 .calltip{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:120;background:#111;color:#fff;padding:16px 18px;border-radius:6px;width:min(360px,92vw);box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:13px}
 .calltip b{display:block;font-weight:500;margin-bottom:2px}.calltip span{display:block;font-size:22px;font-family:var(--serif);margin-bottom:10px;-webkit-user-select:text;user-select:text}
 .calltip div{display:flex;gap:8px}.calltip .pill{height:36px;padding:0 14px;font-size:13px}
+.bkbox{width:min(980px,100%);padding:0;animation:none}
+.bkbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 24px 10px;position:sticky;top:0;background:#fff;z-index:2}
+.bkbar h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.3;margin-top:4px}
+.bkact{display:flex;gap:8px;flex-wrap:wrap;padding:0 24px 14px;position:sticky;top:78px;background:#fff;z-index:2;border-bottom:1px solid var(--line)}
+.bkact .sbtn.on{background:#000;color:#fff}
+.bkpages{background:#e9e9e9;padding:14px;display:grid;gap:14px}
+.bkpages img{width:100%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.12);min-height:200px}
+.trims td.b{white-space:nowrap}
+@media (max-width:760px){.bkbar{padding:18px 16px 8px}.bkbar h3{font-size:19px}.bkact{padding:0 16px 12px;top:70px}.bkpages{padding:8px;gap:8px}.trims td.b{white-space:normal}.trims td.b .sbtn{display:block;margin:4px 0;text-align:center;padding:6px 8px;font-size:12px}}
 /* Footer */
 .ft{background:#000;color:#bdbdbd;padding:70px 0 110px;font-size:13px}
 .ft .top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid #262626;flex-wrap:wrap}
@@ -651,7 +660,7 @@ img{-webkit-user-drag:none;pointer-events:auto}
   <div class="wrap">
     <div class="sec-hd">
       <div><div class="eyebrow">Catalogue</div><h2>공식 카탈로그</h2></div>
-      <p>메르세데스-벤츠 코리아 공식 카탈로그(PDF)로 바로 연결됩니다.</p>
+      <p>누르면 메르세데스-벤츠 코리아 공식 카탈로그(PDF)가 내려받아집니다. 내려받은 파일을 열어 보세요.</p>
     </div>
     <div class="cat-list" id="catlist"></div>
   </div>
@@ -817,7 +826,7 @@ img{-webkit-user-drag:none;pointer-events:auto}
     <div class="mtop"><div class="ph2"><img id="mImg" alt=""></div><div class="info"><div class="eyebrow" id="mCat"></div><h3 id="mTitle"></h3><div id="mFrom"></div></div></div>
     <div class="trims">
       <table><thead><tr><th>트림</th><th style="text-align:right;padding-right:20px">권장소비자가</th><th></th></tr></thead><tbody id="mRows"></tbody></table>
-      <div class="mfoot"><small>옵션가 제외 · 2026.10.27 가격표 기준 · <a class="lnk" href="#price">이번 달 할인 보기</a></small><a class="lnk" id="mCatalog" target="_blank" rel="noopener">공식 카탈로그 PDF ↗</a></div>
+      <div class="mfoot"><small>옵션가 제외 · 2026.10.27 가격표 기준 · <a class="lnk" href="#price">이번 달 할인 보기</a></small><a class="lnk" id="mCatalog" target="_blank" rel="noopener noreferrer">공식 카탈로그 PDF 내려받기 ↓</a></div>
     </div>
   </div>
 </div>
@@ -853,7 +862,24 @@ img{-webkit-user-drag:none;pointer-events:auto}
     <p class="itoast" id="iToast"></p>
   </div>
 </div>
+<div class="modal" id="book" role="dialog" aria-modal="true" aria-labelledby="bkT">
+  <div class="mbox bkbox">
+    <div class="bkbar">
+      <div><div class="eyebrow">어프로치북 · 옵션 비교</div><h3 id="bkT"></h3></div>
+      <button class="close" id="bkClose" aria-label="닫기" style="position:static">×</button>
+    </div>
+    <div class="bkact">
+      <button class="sbtn" id="bkTrim">사양·옵션</button>
+      <button class="sbtn" id="bkCmp">라인 비교</button>
+      <a class="sbtn" id="bkCat" target="_blank" rel="noopener noreferrer" download>카탈로그 ↓</a>
+      <a class="sbtn" id="bkQuote" href="#">견적 받기</a>
+    </div>
+    <div class="bkpages" id="bkPages"></div>
+    <p class="note" style="margin:14px 20px 20px">어프로치북(THE SALES BOOK 2026.10) 기준입니다. 가격은 권장소비자가(2026.10.27 가격표, 옵션가 제외)이며 사양은 연식·재고에 따라 다를 수 있습니다.</p>
+  </div>
+</div>
 <script src="data/models.js"></script>
+<script src="data/book.js"></script>
 <script>
 /* ===== 연락처·링크 설정 (여기만 바꾸면 전체 반영) ===== */
 const PHONE='01063373652';
@@ -868,6 +894,8 @@ const smsHref=body=>'sms:'+PHONE+'?body='+encodeURIComponent('[벤츠천재 홈�
 const byId=Object.fromEntries(M.map(m=>[m[0],m]));
 const $=id=>document.getElementById(id);
 const tkey=t=>t[0]+(t[2]?' (27)':'');
+const catFor=(m,t)=>{let f=m[4];if(m[0]==='amg-cle'&&/Cabriolet/.test(t[0]))f='The%20all-new%20AMG%20CLE%20Cabriolet_catalogue_20260921.pdf';return f?CAT_BASE+f:''};
+const modelOfTrim=k=>M.find(m=>m[5].some(t=>tkey(t)===k));
 
 function bindLinks(root){
   root.querySelectorAll('[data-sms]').forEach(a=>{a.href='#';a.setAttribute('role','button')});
@@ -899,7 +927,7 @@ function render(){
 }
 render();
 $('rail').innerHTML=SOON.map(s=>`<article class="scard"><a class="ph" href="#" data-open="${s[0]}"><img src="img/p${s[3]}.webp" alt="${esc(s[1])}" loading="lazy"></a><div class="bd"><small>COMING SOON</small><h3>${esc(s[1])}</h3><p>${esc(s[2])}</p><a class="pill white" data-sms="출시 알림 신청: ${esc(s[1])}%0A출시일·가격·사전계약 조건 나오면 알려주세요.">출시 알림 받기</a></div></article>`).join('');
-const seen=new Set();$('catlist').innerHTML=M.filter(m=>m[4]&&!seen.has(m[4])&&seen.add(m[4])).map(m=>`<a href="${CAT_BASE+m[4]}" target="_blank" rel="noopener">${esc(m[2])}</a>`).join('');
+const seen=new Set();$('catlist').innerHTML=M.filter(m=>m[4]&&!seen.has(m[4])&&seen.add(m[4])).map(m=>`<a href="${CAT_BASE+m[4]}" target="_blank" rel="noopener noreferrer">${esc(m[2])}</a>`).join('');
 $('f-model').innerHTML+=CATS.slice(1).map(([k,v])=>`<optgroup label="${v}">`+M.filter(m=>m[1]===k).flatMap(m=>m[5].map(t=>`<option>${esc(t[0]+(t[2]&&t[1]==null?' (27년식)':'')+' · '+won(t[1]))}</option>`)).join('')+'</optgroup>').join('');
 
 /* modal */
@@ -907,7 +935,7 @@ const modal=$('modal');
 function openModel(id){const m=byId[id];if(!m)return;const p=minP(m);
   $('mImg').src='img/p'+m[3]+'.webp';$('mImg').alt=m[2];$('mCat').textContent=CATNAME[m[1]];$('mTitle').textContent=m[2];
   $('mFrom').textContent=p?won(p)+'부터 · 트림 '+m[5].length+'개':'가격 공개 예정 · 트림 '+m[5].length+'개';
-  $('mRows').innerHTML=m[5].map(t=>`<tr><td>${esc(t[0])}${t[2]?'<span class="yr">27년식</span>':''}</td><td class="p">${won(t[1])}</td><td class="b"><a class="sbtn" data-sms="견적 문의: ${esc(t[0])}${t[2]?' (27년식)':''}">견적 받기</a></td></tr>`).join('');
+  $('mRows').innerHTML=m[5].map(t=>`<tr><td>${esc(t[0])}${t[2]?'<span class="yr">27년식</span>':''}</td><td class="p">${won(t[1])}</td><td class="b">${catFor(m,t)?`<a class="sbtn" href="${catFor(m,t)}" target="_blank" rel="noopener noreferrer" download>카탈로그 ↓</a> `:''}${BOOK_PAGES[tkey(t)]?`<button class="sbtn" data-book="${esc(tkey(t))}">옵션 비교</button> `:''}<a class="sbtn" data-sms="견적 문의: ${esc(t[0])}${t[2]?' (27년식)':''}">견적 받기</a></td></tr>`).join('');
   const c=$('mCatalog');if(m[4]){c.href=CAT_BASE+m[4];c.hidden=false}else c.hidden=true;
   modal.classList.add('open');document.body.style.overflow='hidden';bindLinks(modal)}
 function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
@@ -942,13 +970,24 @@ build();
 const inq=$('inq');let inqSubject='';
 function inqText(){return '[벤츠천재 홈페이지 문의]\n'+inqSubject+'\n성함: '+$('iName').value.trim()+'\n연락처: '+$('iTel').value.trim()+($('iMemo').value.trim()?'\n메모: '+$('iMemo').value.trim():'')}
 function inqSync(){$('iSms').href='sms:'+PHONE+'?body='+encodeURIComponent(inqText())}
-function openInq(subject){inqSubject=subject;const first=subject.split('\n')[0];$('inqT').textContent=first.replace(/^[^:]+:\s*/,'')||first;$('inqSub').textContent=subject;$('iToast').textContent='문자 버튼이 열리지 않으면 복사 후 카톡으로 보내거나 010-6337-3652로 전화 주세요.';inqSync();closeModal();inq.classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>$('iName').focus(),50)}
+function openInq(subject){inqSubject=subject;const first=subject.split('\n')[0];$('inqT').textContent=first.replace(/^[^:]+:\s*/,'')||first;$('inqSub').textContent=subject;$('iToast').textContent='문자 버튼이 열리지 않으면 복사 후 카톡으로 보내거나 010-6337-3652로 전화 주세요.';inqSync();closeModal();if(typeof closeBook==='function')closeBook();inq.classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>$('iName').focus(),50)}
 function closeInq(){inq.classList.remove('open');document.body.style.overflow=''}
 ['iName','iTel','iMemo'].forEach(id=>$(id).addEventListener('input',inqSync));
 $('inqClose').onclick=closeInq;inq.onclick=e=>{if(e.target===inq)closeInq()};
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeInq()});
 $('iKakao').onclick=async()=>{try{await navigator.clipboard.writeText(inqText());$('iToast').textContent='복사했어요. 열리는 카톡 대화창에 붙여넣어 보내주세요.'}catch(_){$('iToast').textContent='카톡 대화창에 위 내용을 적어 보내주세요.'}if(!window.open(KAKAO,'_blank','noopener'))location.href=KAKAO};
 document.addEventListener('click',e=>{const a=e.target.closest('[data-sms]');if(!a)return;e.preventDefault();e.stopPropagation();openInq(decodeURIComponent(a.dataset.sms))},true);
+
+/* ===== 어프로치북 보기 ===== */
+const book=$('book');let bkKey='';
+function bkShow(mode){const p=BOOK_PAGES[bkKey],c=BOOK_COMPARE[bkKey];const pages=mode==='cmp'&&c?[c]:[p,p+1].filter(n=>n<=BOOK_TOTAL);
+  $('bkPages').innerHTML=pages.map(n=>`<img src="book/p${String(n).padStart(3,'0')}.webp" alt="어프로치북 ${n}쪽" loading="lazy">`).join('');
+  $('bkTrim').classList.toggle('on',mode!=='cmp');$('bkCmp').classList.toggle('on',mode==='cmp');$('bkCmp').hidden=!c;book.querySelector('.mbox').scrollTop=0}
+function openBook(key){if(!BOOK_PAGES[key])return;bkKey=key;const y=/ \(27\)$/.test(key);$('bkT').textContent=key.replace(' (27)','')+(y?' · 27년식':'');$('bkQuote').dataset.sms='견적 문의: '+key.replace(' (27)',' (27년식)');{const m=modelOfTrim(key),t=m&&m[5].find(t=>tkey(t)===key),u=m?catFor(m,t):'';$('bkCat').hidden=!u;if(u)$('bkCat').href=u}closeModal();bkShow('trim');book.classList.add('open');document.body.style.overflow='hidden'}
+function closeBook(){book.classList.remove('open');document.body.style.overflow=''}
+$('bkTrim').onclick=()=>bkShow('trim');$('bkCmp').onclick=()=>bkShow('cmp');$('bkClose').onclick=closeBook;book.onclick=e=>{if(e.target===book)closeBook()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBook()});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-book]');if(b){e.preventDefault();openBook(b.dataset.book)}});
 
 /* ===== 전화·문자 연결 보조 (claude.ai 화면 안에서는 바로 연결이 막힘) ===== */
 const tip=document.createElement('div');tip.className='calltip';tip.hidden=true;document.body.appendChild(tip);
@@ -1050,7 +1089,7 @@ function route(){
   const h=location.hash.slice(1);const view=VIEWS.includes(h)?h:'home';
   views.forEach(v=>v.hidden=v.dataset.view!==view);
   document.querySelectorAll('#gnav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));
-  closeModal();$('mnav').classList.remove('open');
+  closeModal();closeBook();$('mnav').classList.remove('open');
   if(view!=='home'){window.scrollTo(0,0);return}
   if(h&&h!=='top'){const el=$(h);if(el)requestAnimationFrame(()=>el.scrollIntoView())}else window.scrollTo(0,0);
 }

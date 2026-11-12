@@ -45,7 +45,7 @@ const M=[
 ['amg-glc','amg','Mercedes-AMG GLC',211,'The%20new%20Mercedes-AMG%20GLC%20n%20GLC%20Coupe_Catalogue_20260424.pdf',[['AMG GLC 43 4MATIC',10360],['AMG GLC 43 4MATIC Coupé',10830]]],
 ['amg-gle','amg','Mercedes-AMG GLE',215,'Mercedes-AMG%20GLE%20n%20GLE%20Coupe_Catalogue_20260619.pdf',[['AMG GLE 53 4MATIC+',16600],['AMG GLE 53 4MATIC+ Coupé',17000],['AMG GLE 53 4MATIC+',null,1],['AMG GLE 53 4MATIC+ Coupé',null,1]]],
 ['amg-gls','amg','Mercedes-AMG GLS',223,null,[['AMG GLS 63 4MATIC+',21000],['AMG GLS 63 4MATIC+',null,1]]],
-['amg-g','amg','Mercedes-AMG G-Class',227,'The%20new%20Mercedes-AMG%20G-Class_Catalogue_20261029',[['AMG G 63',27500],['AMG G 63 MANUFAKTUR',30100]]],
+['amg-g','amg','Mercedes-AMG G-Class',227,'The%20new%20Mercedes-AMG%20G-Class_Catalogue_20261029.pdf',[['AMG G 63',27500],['AMG G 63 MANUFAKTUR',30100]]],
 ['my-s','maybach','Mercedes-Maybach S-Class',233,'The_new_Mercedes-Maybach_S-Class_Catalogue_20260811.pdf',[['Mercedes-Maybach S 580',31700],['Mercedes-Maybach S 580 MANUFAKTUR',33600],['Mercedes-Maybach S 680',40700]]],
 ['my-sl','maybach','Mercedes-Maybach SL',240,'The%20all-new%20Mercedes-Maybach%20SL_Catalogue_20260424.pdf',[['Mercedes-Maybach SL 680',34800]]],
 ['my-gls','maybach','Mercedes-Maybach GLS',242,'The%20new%20Mercedes-Maybach%20GLS_catalogue_20260622.pdf',[['Mercedes-Maybach GLS 600 4MATIC',29500],['Mercedes-Maybach GLS 600 MANUFAKTUR',33700],['Mercedes-Maybach GLS 600 4MATIC',null,1]]],
