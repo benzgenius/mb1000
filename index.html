@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noai, noimageai">
+<meta name="author" content="벤츠천재천재현 · 천재현 부장">
+<meta name="copyright" content="© 벤츠천재천재현 천재현. 무단 복제·재배포 금지">
+<title>벤츠천재 · 천재현 부장 | 메르세데스-벤츠 견적 상담</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;--ink:#111;--ink2:#333;--muted:#767676;--line:#e3e3e3;--soft:#f4f4f4;--studio:#ececec;
+  --blue:#0078d6;--kakao:#fee500;--serif:"Noto Serif KR",Georgia,"Times New Roman",serif;--sans:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo",sans-serif;
+  --max:1360px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.6;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img{display:block;max-width:100%}
+html,body{overflow-x:clip;max-width:100%}
+main,section,.wrap{max-width:100vw}
+.qwrap>*,form.q>*,.who-grid>*,.news>*,.grid>*,.ways>*,.cards3>*,.rsec>*,.trade>*{min-width:0}
+.fld input,.fld select,.fld textarea{width:100%;max-width:100%;min-width:0}
+.cinfo a,.contact a,.ft .bot div{overflow-wrap:anywhere}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+[hidden]{display:none!important}
+
+/* Header */
+.hd{position:sticky;top:0;z-index:50;background:#000;color:#fff;height:68px}
+.hd .wrap{height:100%;display:flex;align-items:center;gap:36px}
+.logo{line-height:1.1;flex:none}
+.logo b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.04em}
+.logo small{font-size:10px;letter-spacing:.32em;opacity:.7}
+.hd nav{display:flex;gap:24px;font-size:14px;flex:1}
+.hd nav a{opacity:.8;padding:6px 0;border-bottom:1px solid transparent;transition:.2s;white-space:nowrap}
+.hd nav a:hover,.hd nav a.on{opacity:1;border-color:#fff}
+.hd .right{display:flex;align-items:center;gap:10px;margin-left:auto}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 24px;border-radius:4px;font-size:14px;font-weight:500;transition:.2s;white-space:nowrap}
+.pill.white{background:#fff;color:#000}.pill.white:hover{background:#ddd}
+.pill.black{background:#000;color:#fff}.pill.black:hover{background:#333}
+.pill.line{border:1px solid #000;color:#000}.pill.line:hover{background:#000;color:#fff}
+.pill.line-w{border:1px solid #fff;color:#fff}.pill.line-w:hover{background:#fff;color:#000}
+.pill.kakao{background:var(--kakao);color:#191919}.pill.kakao:hover{filter:brightness(.95)}
+.hd .pill{height:38px;padding:0 16px}
+.burger{display:none;width:40px;height:40px;position:relative;margin:0 -8px 0 -8px;flex:none}
+.burger i,.burger i:before,.burger i:after{position:absolute;left:9px;width:22px;height:1.5px;background:#fff;content:""}
+.burger i{top:19px}.burger i:before{top:-7px;left:0}.burger i:after{top:7px;left:0}
+.mnav{display:none;position:fixed;inset:68px 0 0;background:#000;color:#fff;z-index:49;padding:16px 28px;overflow:auto}
+.mnav.open{display:block}
+.mnav a{display:block;font-family:var(--serif);font-size:22px;padding:13px 0;border-bottom:1px solid #222}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 70% 40%,#f7f7f7 0%,#e6e6e6 55%,#d9d9d9 100%);overflow:hidden}
+.slide{display:none;min-height:min(74vh,680px)}
+.slide.on{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;animation:fade .8s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.slide .txt{padding:70px 0 110px max(40px,calc((100vw - var(--max))/2 + 40px))}
+.slide h1,.slide h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,60px);line-height:1.2;margin:18px 0 20px;letter-spacing:-.02em}
+.slide p{font-size:16px;color:var(--ink2);max-width:440px}
+.slide .price{margin-top:18px;font-size:14px}
+.slide .price b{font-weight:500}
+.slide .btns{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.slide .pic{align-self:end;padding:40px 0 70px}
+.slide .pic img{width:100%;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 62% 64% at 52% 58%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 62% 64% at 52% 58%,#000 58%,transparent 100%)}
+.hero-ctrl{position:absolute;left:0;right:0;bottom:30px}
+.hero-ctrl .wrap{display:flex;align-items:center;gap:20px}
+.dots{display:flex;gap:10px}
+.dots button{width:44px;height:2px;background:rgba(0,0,0,.2);position:relative;overflow:hidden}
+.dots button.on:after{content:"";position:absolute;inset:0;background:#000;animation:bar 7s linear}
+@keyframes bar{from{transform:translateX(-100%)}to{transform:none}}
+.hero-ctrl small{font-size:12px;color:var(--muted)}
+
+/* Quick + social */
+.quick{border-bottom:1px solid var(--line)}
+.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.quick a{display:flex;gap:16px;align-items:center;padding:28px 24px;border-right:1px solid var(--line);transition:.2s}
+.quick a:first-child{border-left:1px solid var(--line)}
+.quick a:hover{background:var(--soft)}
+.quick2 .wrap a{border-top:0}
+.quick svg{flex:none;width:34px;height:34px;stroke:#000;fill:none;stroke-width:1.3}
+.quick b{display:block;font-weight:500;font-size:15px}
+.quick span{font-size:13px;color:var(--muted)}
+.social{background:#000;color:#fff}
+.social .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.social a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 28px;border-right:1px solid #222;transition:.2s}
+.social a:first-child{border-left:1px solid #222}
+.social a:hover{background:#151515}
+.social .ic{display:flex;align-items:center;gap:14px}
+.social svg{width:30px;height:30px;flex:none}
+.social b{display:block;font-weight:500;font-size:15px}
+.social span{font-size:12px;color:#8a8a8a}
+.social i{font-style:normal;color:#8a8a8a}
+.social a.soon{cursor:default}.social a.soon:hover{background:none}
+
+/* Sections */
+section.sec{padding:110px 0}
+.sec-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
+.sec-hd h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.25;margin-top:12px;letter-spacing:-.02em}
+.sec-hd p{color:var(--muted);font-size:15px;max-width:520px}
+.dark{background:#000;color:#fff}
+.dark .eyebrow,.dark .sec-hd p{color:#9a9a9a}
+.grey{background:var(--soft)}
+.lnk{font-weight:500;border-bottom:1px solid currentColor;padding-bottom:1px}
+.lnk.g{color:var(--muted);border-color:transparent}.lnk.g:hover{color:#000}
+
+/* Consultant */
+.who-grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:72px;align-items:center;max-width:1100px}
+.who-ph{background:#fff;border:1px solid var(--line);aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.who-ph img{width:92%}
+.who-txt h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.4vw,48px);line-height:1.2;margin:14px 0 6px}
+.who-txt .nick{font-size:15px;color:var(--muted)}
+.who-txt blockquote{font-family:var(--serif);font-size:19px;line-height:1.7;margin:32px 0;padding-left:22px;border-left:2px solid #000;color:var(--ink2)}
+.cinfo{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #000}
+.cinfo div{padding:16px 0;border-bottom:1px solid var(--line)}
+.cinfo span{display:block;font-size:12px;color:var(--muted);margin-bottom:2px}
+.cinfo a,.cinfo p{font-size:16px}
+.who-txt .btns{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+
+/* Cards */
+.news{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ncard{display:flex;flex-direction:column}
+.ph{background:var(--studio);display:flex;align-items:flex-end;overflow:hidden;position:relative}
+.ph img{width:100%;mix-blend-mode:multiply;transition:transform .6s}
+.ncard .ph{aspect-ratio:4/3}
+.ncard:hover .ph img,.mcard:hover .ph img{transform:scale(1.04)}
+.ncard .tag{margin-top:18px;font-size:12px;color:var(--blue);font-weight:500}
+.ncard h3{font-family:var(--serif);font-weight:400;font-size:22px;margin:6px 0 8px;line-height:1.3}
+.ncard p{font-size:14px;color:var(--ink2);flex:1}
+.ncard .pr{font-size:14px;margin:12px 0 16px}
+.ncard .acts{display:flex;gap:16px;font-size:14px}
+.tabs{display:flex;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;margin-bottom:28px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{padding:14px 22px;font-size:15px;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:#000;border-color:#000;font-weight:500}
+.dark .tabs{border-color:#333}.dark .tabs button{color:#888}.dark .tabs button.on{color:#fff;border-color:#fff}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.search{display:flex;align-items:center;border-bottom:1px solid #000;width:min(380px,100%)}
+.search input{border:0;outline:0;font:inherit;font-size:15px;padding:10px 0;flex:1;background:none;color:inherit}
+.tools small{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px}
+.mcard{display:flex;flex-direction:column;cursor:pointer}
+.mcard .ph{aspect-ratio:3/2}
+.badge{position:absolute;top:12px;left:12px;font-size:11px;background:#000;color:#fff;padding:3px 8px;border-radius:2px;letter-spacing:.04em}
+.badge.ev{background:var(--blue)}
+.mcard .cat{font-size:12px;color:var(--muted);margin-top:16px}
+.mcard h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.3;margin:4px 0 6px}
+.mcard .from{font-size:15px}
+.mcard .from em{font-style:normal;color:var(--muted);font-size:13px;margin-left:6px}
+.mcard .more{margin-top:12px;font-size:13px;font-weight:500}
+.mcard .more:after{content:" ›"}
+.empty{padding:40px 0;color:var(--muted)}
+.note{margin-top:40px;font-size:12px;color:var(--muted)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:24px;overflow-x:auto;padding-bottom:12px}
+.scard{background:#141414;display:flex;flex-direction:column}
+.scard .ph{aspect-ratio:3/2}
+.scard .bd{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.scard small{font-size:12px;color:#8fc4ff}
+.scard h3{font-family:var(--serif);font-weight:400;font-size:20px;margin:6px 0 4px;line-height:1.3}
+.scard p{font-size:13px;color:#9a9a9a;flex:1;margin-bottom:18px}
+.scard .pill{height:40px;width:100%}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #000}
+.step{padding:24px 18px 0 0}
+.step b{font-family:var(--serif);font-weight:400;font-size:32px;display:block;color:#bbb}
+.step h4{font-size:16px;font-weight:500;margin:10px 0 6px}
+.step p{font-size:13px;color:var(--muted)}
+.fin{margin-top:72px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.fin div{background:#fff;padding:30px 26px}
+.fin h4{font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:6px}
+.fin .who{font-size:12px;color:var(--blue);font-weight:500;margin-bottom:14px;display:block}
+.fin ul{list-style:none;font-size:14px;color:var(--ink2)}
+.fin li{padding:6px 0;border-top:1px solid var(--soft)}
+.fin li:first-child{border:0}
+
+/* Quote */
+.qwrap{display:grid;grid-template-columns:5fr 7fr;gap:80px}
+.qside h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.25;margin:12px 0 18px}
+.qside p{color:#bdbdbd;font-size:15px}
+.qside .contact{margin-top:40px;border-top:1px solid #333}
+.qside .contact div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #333;font-size:15px}
+.qside .contact span{color:#8a8a8a}
+form.q{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px}
+.fld{display:flex;flex-direction:column;gap:8px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:13px;color:#9a9a9a}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:15px;color:#fff;background:transparent;border:0;border-bottom:1px solid #555;padding:10px 0;outline:0;border-radius:0}
+.fld select option,.fld select optgroup{color:#000}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:#fff}
+.fld textarea{resize:vertical;min-height:70px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips button{border:1px solid #444;color:#ccc;padding:9px 16px;border-radius:40px;font-size:13px;transition:.2s}
+.chips button.on{background:#fff;color:#000;border-color:#fff}
+.trade{display:none;grid-column:1/-1;grid-template-columns:repeat(3,1fr);gap:24px;padding:22px;border:1px solid #333}
+.trade.on{display:grid}
+.qact{grid-column:1/-1;display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.qprev{grid-column:1/-1;background:#111;border:1px solid #333;padding:16px 18px;font:inherit;font-size:14px;color:#ddd;line-height:1.7;resize:vertical;outline:0;border-radius:2px;width:100%}
+.qprev:focus{border-color:#fff}
+.toast{font-size:13px;color:#8fc4ff}
+
+/* Catalog */
+.cat-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0 40px}
+.cat-list a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.cat-list a:after{content:"↗";color:var(--muted)}
+.cat-list a:hover{color:var(--blue)}
+
+/* Sub pages */
+.phead{background:#000;color:#fff;padding:80px 0 64px}
+.phead .eyebrow{color:#9a9a9a}
+.phead h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,56px);line-height:1.2;margin:16px 0 18px;letter-spacing:-.02em}
+.phead p{color:#bdbdbd;max-width:620px;font-size:16px}
+.phead .btns{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.pnav{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:68px;z-index:20}
+.pnav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.pnav a{padding:16px 18px;font-size:14px;color:var(--muted);white-space:nowrap;border-bottom:2px solid transparent}
+.pnav a.on{color:#000;border-color:#000;font-weight:500}
+.notice{border-left:3px solid var(--blue);background:#f2f7fc;padding:18px 22px;font-size:14px;color:var(--ink2);margin-bottom:40px}
+.notice b{color:#000}
+.notice ul{margin-top:8px;padding-left:18px}
+.chipbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.chipbar button{border:1px solid var(--line);padding:8px 14px;font-size:13px;border-radius:3px;background:#fff}
+.chipbar button.on{background:#000;color:#fff;border-color:#000}
+.ptable{margin-bottom:56px}
+.ptable .th{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:12px;border-bottom:1px solid #000;gap:16px}
+.ptable h3{font-family:var(--serif);font-weight:400;font-size:26px}
+.ptable .th small{font-size:12px;color:var(--muted)}
+.ptable table{width:100%;border-collapse:collapse;font-size:15px}
+.ptable table{table-layout:fixed}.ptable th:nth-child(1){width:27%}.ptable th:nth-child(2){width:12%}.ptable th:nth-child(3){width:12%}.ptable th:nth-child(4){width:13%}.ptable th:nth-child(5){width:14%}.ptable th:nth-child(6){width:22%}
+.ptable th{font-size:12px;color:var(--muted);font-weight:500;text-align:right;padding:12px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ptable th:first-child{text-align:left;padding-left:0}
+.ptable td{padding:16px 10px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+.ptable td:first-child{text-align:left;padding-left:0}
+.ptable td.final{background:#f6f6f6;font-weight:500;white-space:nowrap}
+.ptable td.final small{display:block;font-weight:400;color:var(--muted);font-size:11px}
+.ptable td .dc{color:#c0392b}
+.ptable td small.fin{display:block;color:var(--blue);font-size:12px}
+.yr{font-size:11px;border:1px solid var(--blue);color:var(--blue);padding:1px 6px;margin-left:8px;border-radius:2px;white-space:nowrap}
+.fprog{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:48px}
+.fprog div{background:#fff;padding:22px 24px}
+.fprog h4{font-weight:500;font-size:16px;margin-bottom:4px}
+.fprog p{font-size:13px;color:var(--muted)}
+.sbtn{font-size:13px;font-weight:500;border:1px solid #000;padding:7px 14px;border-radius:3px;white-space:nowrap;display:inline-block}
+.sbtn:hover{background:#000;color:#fff}
+
+.gloss{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:40px}
+.gloss div{background:#fff;padding:14px 16px}.gloss b{display:block;font-size:13px;font-weight:500}.gloss span{font-size:12px;color:var(--muted)}
+.ptable td .mbf{display:block;font-size:13px}.ptable td .mbf em{font-style:normal;color:var(--blue);font-weight:500}
+.tagx{display:inline-block;font-size:11px;padding:1px 6px;border-radius:2px;margin:2px 4px 2px 0;white-space:nowrap}
+.tagx.ed{background:#fbe9e9;color:#b3261e}.tagx.cq{background:#eaf6ee;color:#0a7d34}.tagx.rm{background:#f2f7fc;color:#004f8f;white-space:normal}
+.ptable td.rmk{text-align:left;font-size:12px}
+/* Stock */
+.sgroup{border-top:1px solid #000;margin-bottom:36px}
+.sgroup h3{font-family:var(--serif);font-weight:400;font-size:22px;padding:16px 0 4px}
+.srow{display:grid;grid-template-columns:2.2fr 1fr 2fr 2fr .8fr auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.srow .t{font-weight:500}
+.srow span{color:var(--ink2)}
+.srow .q{text-align:right}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:50%;border:1px solid #bbb;margin-right:6px;vertical-align:middle}
+.emptybox{border:1px dashed #bbb;padding:48px 32px;text-align:center}
+.emptybox h3{font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:10px}
+.emptybox p{color:var(--muted);font-size:14px;max-width:520px;margin:0 auto 24px}
+.emptybox .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+.strim{border-bottom:1px solid var(--line);padding:6px 0 10px}
+.stt{font-weight:500;font-size:15px;padding:14px 0 6px}
+.shead{width:100%;display:grid;grid-template-columns:1.3fr 1.7fr .9fr .5fr 20px;gap:12px;align-items:center;text-align:left;padding:11px 10px;font-size:14px;border-radius:3px}
+.shead:hover,.shead.open{background:var(--soft)}
+.shead .sc{display:flex;align-items:center;gap:8px}.sw{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid #bbb;flex:none}
+.shead .si{color:var(--ink2)}.shead .se{color:var(--blue);font-size:13px}.shead .sq{text-align:right;font-weight:500}.shead .sv{color:var(--muted);transition:.2s}
+.shead.open .sv{transform:rotate(180deg)}
+.sdet{padding:6px 10px 16px 32px}
+.sdh{font-size:12px;color:var(--muted);margin-bottom:8px}
+.smonths{display:grid;gap:6px;max-width:520px}
+.sm{display:grid;grid-template-columns:84px 1fr 52px;gap:10px;align-items:center;font-size:13px}
+.sm b{display:block;height:8px;width:var(--w);background:#000;border-radius:4px}
+.sm.now span{color:#0a7d34;font-weight:500}.sm.now b{background:#0a7d34}
+.sm em{font-style:normal;text-align:right}
+.sact{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+/* Report */
+.rlead{font-family:var(--serif);font-size:22px;line-height:1.7;max-width:820px;color:var(--ink2)}
+.rmeta{margin-top:18px;font-size:13px;color:var(--muted)}
+.rsec{display:grid;grid-template-columns:280px 1fr;gap:60px;padding:56px 0;border-top:1px solid var(--line)}
+.rsec .tag{font-size:12px;color:var(--blue);font-weight:500;letter-spacing:.06em}
+.rsec h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.35;margin-top:10px}
+.rsec p{font-size:16px;color:var(--ink2);margin-bottom:14px;max-width:720px}
+.rsec ul{list-style:none;margin-top:18px;display:grid;gap:8px;max-width:720px}
+.rsec li{background:var(--soft);padding:12px 16px;font-size:14px;border-left:2px solid #000}
+.draft{display:inline-block;font-size:11px;background:#fff3cd;color:#7a5b00;padding:2px 8px;margin-left:8px;border-radius:2px;letter-spacing:0}
+
+/* Card page */
+.rule{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#333;border:1px solid #333;margin-top:10px}
+.rule div{background:#0b0b0b;padding:34px 32px}
+.rule small{font-size:12px;letter-spacing:.14em;color:#8a8a8a}
+.rule h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:10px 0 8px}
+.rule p{color:#bdbdbd;font-size:14px}
+.rule .big{font-size:15px;color:#fff;font-weight:500;margin-top:16px;display:inline-block;padding:6px 12px;border:1px solid #444;border-radius:40px}
+.rule div.sh .big{background:#fff;color:#000;border-color:#fff}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid #333}
+.flow div{padding:24px 24px 0 0}
+.flow b{font-family:var(--serif);font-weight:400;font-size:30px;color:#555}
+.flow h4{font-size:16px;font-weight:500;margin:8px 0 4px}
+.flow p{font-size:13px;color:#9a9a9a}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.way{border:1px solid var(--line);padding:32px}
+.way .tag{font-size:12px;color:var(--blue);font-weight:500}
+.way h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:8px 0 10px}
+.way p{font-size:14px;color:var(--ink2)}
+.way ol{margin:18px 0 22px 18px;font-size:14px;display:grid;gap:6px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ccard{border:1px solid var(--line);display:flex;flex-direction:column}
+.ccard .face{aspect-ratio:1.586;margin:24px 24px 0;border-radius:12px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;font-size:12px;letter-spacing:.1em}
+.ccard .face b{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.06em}
+.ccard.m .face{background:linear-gradient(135deg,#1b1b1b,#3c3c3c 60%,#111)}
+.ccard.e .face{background:linear-gradient(135deg,#2a2622,#6b5e4e 60%,#2a2622)}
+.ccard.a .face{background:linear-gradient(135deg,#c9ccd1,#f2f3f5 55%,#b7bbc2);color:#111}
+.ccard .bd{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.ccard h3{font-family:var(--serif);font-weight:400;font-size:22px}
+.ccard .fee{font-size:14px;color:var(--muted);margin:2px 0 14px}
+.ccard dl{display:grid;gap:10px;font-size:14px;flex:1}
+.ccard dt{font-size:12px;color:var(--muted)}
+.ccard .pill{margin-top:20px;height:42px}
+.rates{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #000}
+.rates div{padding:20px 0;border-bottom:1px solid var(--line)}
+.rates span{font-size:13px;color:var(--muted)}
+.rates b{display:block;font-family:var(--serif);font-weight:400;font-size:28px}
+
+/* MOU */
+.mbox2{max-width:760px;margin:0 auto;text-align:center}
+.mbox2 .search{width:100%;border-bottom:2px solid #000;margin:28px 0 10px}
+.mbox2 .search input{font-size:20px;padding:16px 0;text-align:center}
+.mres{margin-top:28px;text-align:left}
+.mres .hit{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.mres .hit b{font-weight:500}
+.mres .ok{font-size:12px;color:#fff;background:#0a7d34;padding:3px 10px;border-radius:20px}
+.mres .no{background:var(--soft);padding:28px;text-align:center}
+.mres .no p{color:var(--muted);font-size:14px;margin:6px 0 18px}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.mbox{background:#fff;width:min(920px,100%);max-height:92vh;overflow:auto;position:relative;animation:up .3s ease}
+@keyframes up{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.mtop{display:grid;grid-template-columns:1fr 1fr;background:var(--studio)}
+.mtop .ph2{display:flex;align-items:flex-end}.mtop img{mix-blend-mode:multiply}
+.mtop .info{padding:44px 40px 36px}
+.mtop h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.25;margin:8px 0 10px}
+.close{position:absolute;top:14px;right:14px;width:40px;height:40px;font-size:26px;line-height:1;z-index:2}
+.trims{padding:28px 40px 40px}
+.trims table{width:100%;border-collapse:collapse;font-size:15px}
+.trims th{text-align:left;font-size:12px;color:var(--muted);font-weight:500;padding:0 0 10px;border-bottom:1px solid #000}
+.trims td{padding:16px 0;border-bottom:1px solid var(--line)}
+.trims td.p{text-align:right;white-space:nowrap;padding-right:20px}
+.trims td.b{text-align:right;width:1%}
+.mfoot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.mfoot small{color:var(--muted);font-size:12px}
+
+/* 복사 방지 */
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select,.cinfo,.contact,.qprev,.ft .bot{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;pointer-events:auto}
+.guard{position:fixed;inset:0;z-index:999;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:16px;line-height:1.7}
+.ibox{width:min(560px,100%);padding:36px 36px 30px}
+.ibox h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:8px 0 6px;line-height:1.3}
+.isub{font-size:14px;color:var(--muted);margin-bottom:18px;white-space:pre-line}
+.ifl{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.ifl label{font-size:12px;color:var(--muted)}
+.ifl input,.ifl textarea{font:inherit;font-size:15px;border:0;border-bottom:1px solid #bbb;padding:9px 0;outline:0;background:none;resize:vertical;-webkit-user-select:text;user-select:text}
+.ifl textarea{border:1px solid #ccc;padding:10px 12px;border-radius:2px}
+.ifl input:focus,.ifl textarea:focus{border-color:#000}
+.ibtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ibtns .pill{flex:1 1 auto}
+.itoast{font-size:12px;color:var(--muted);margin-top:12px}
+@media (max-width:760px){.ibox{padding:28px 20px 22px}.ibtns{flex-direction:column}}
+.calltip{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:120;background:#111;color:#fff;padding:16px 18px;border-radius:6px;width:min(360px,92vw);box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:13px}
+.calltip b{display:block;font-weight:500;margin-bottom:2px}.calltip span{display:block;font-size:22px;font-family:var(--serif);margin-bottom:10px;-webkit-user-select:text;user-select:text}
+.calltip div{display:flex;gap:8px}.calltip .pill{height:36px;padding:0 14px;font-size:13px}
+/* Footer */
+.ft{background:#000;color:#bdbdbd;padding:70px 0 110px;font-size:13px}
+.ft .top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid #262626;flex-wrap:wrap}
+.ft .logo{color:#fff}
+.ft nav{display:flex;gap:24px;flex-wrap:wrap;color:#fff}
+.ft .bot{padding-top:30px;display:grid;gap:8px;line-height:1.7}
+.ft .bot p{color:#7d7d7d}
+.fbar{display:none}
+
+@media (max-width:1240px){
+  .hd nav,.hd .right{display:none}
+  .burger{display:block}
+  .hd .wrap{gap:14px}
+}
+@media (max-width:1100px){
+  .news,.grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr);row-gap:30px}
+  .fin{grid-template-columns:1fr 1fr}
+  .qwrap{grid-template-columns:1fr;gap:50px}
+  .who-grid{grid-template-columns:220px 1fr;gap:40px}
+  .cat-list{grid-template-columns:repeat(2,1fr)}
+  .rsec{grid-template-columns:1fr;gap:16px}
+  .cards3{grid-template-columns:1fr 1fr}
+  .srow{grid-template-columns:1fr 1fr;row-gap:4px}
+  .shead{grid-template-columns:1fr auto 20px;row-gap:2px}.shead .si{grid-column:1/2;grid-row:2;font-size:12px}.shead .se{grid-column:2;grid-row:1;text-align:right}.shead .sq{grid-column:2;grid-row:2}.shead .sv{grid-row:1/3;grid-column:3}
+  .sdet{padding-left:10px}.sm{grid-template-columns:76px 1fr 44px}
+  .srow .q{text-align:left}
+}
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .slide.on{grid-template-columns:1fr;min-height:auto}
+  .slide .txt{padding:40px 20px 0}
+  .slide .pic{padding:10px 0 80px}
+  .quick .wrap,.social .wrap{grid-template-columns:1fr 1fr;padding:0}
+  .quick a{padding:20px 16px;border-bottom:1px solid var(--line);gap:12px}
+  .quick a:first-child,.social a:first-child{border-left:0}
+  .quick span,.social span{display:none}
+  .social .wrap{grid-template-columns:1fr 1fr 1fr}
+  .social a{padding:18px 12px;justify-content:center}
+  .social .ic{flex-direction:column;gap:6px;text-align:center}
+  .social b{font-size:12px}.social i{display:none}
+  section.sec{padding:72px 0}
+  .news,.grid{grid-template-columns:1fr 1fr;gap:30px 14px}
+  .mcard h3{font-size:17px}.mcard .from{font-size:13px}.mcard .from em{display:block;margin:0}
+  .ncard h3{font-size:18px}.ncard p{display:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .fin,.ways,.cards3,.rule,.flow{grid-template-columns:1fr}
+  .rates{grid-template-columns:repeat(3,1fr)}
+  form.q,.trade{grid-template-columns:1fr}
+  .mtop{grid-template-columns:1fr}.mtop .info{padding:24px 22px}
+  .trims{padding:16px 22px 30px}
+  .cinfo,.who-grid{grid-template-columns:1fr}
+  .who-ph{width:200px}
+  .cat-list{grid-template-columns:1fr}
+  .ptable table{font-size:13px}
+  .ptable th:nth-child(2),.ptable td:nth-child(2),.ptable th:nth-child(6),.ptable td:nth-child(6){display:none}
+  .ptable th:nth-child(1){width:36%}.ptable th:nth-child(3){width:16%}.ptable th:nth-child(4){width:22%}.ptable th:nth-child(5){width:26%}
+  .ptable td,.ptable th{padding:12px 4px;overflow-wrap:anywhere}.ptable td.final{white-space:normal}.ptable .sbtn{padding:6px 6px;font-size:12px;white-space:normal}
+  .qwrap{grid-template-columns:minmax(0,1fr)}
+  .gloss{grid-template-columns:1fr 1fr}
+  .phead{padding:56px 0 44px}
+  .fbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#000;border-top:1px solid #222}
+  .fbar a{color:#fff;text-align:center;padding:15px 0;font-size:14px;font-weight:500}
+  .fbar a:last-child{background:var(--kakao);color:#191919}
+}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap">
+    <button class="burger" aria-label="메뉴 열기" id="burger"><i></i></button>
+    <a href="#top" class="logo" aria-label="벤츠천재 홈"><b>벤츠천재천재현</b><small>BENZ GENIUS</small></a>
+    <nav aria-label="주요 메뉴" id="gnav">
+      <a href="#models">모델</a>
+      <a href="#new">신차·사전예약</a>
+      <a href="#price">가격·프로모션</a>
+      <a href="#stock">전국 재고</a>
+      <a href="#report">이달의 구매가이드</a>
+      <a href="#card">카드혜택</a>
+      <a href="#mou">MOU 확인</a>
+    </nav>
+    <div class="right">
+      <a class="pill kakao" data-kakao>카톡 상담</a>
+      <a class="pill white" href="#quote">견적 문의</a>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav">
+  <a href="#top">홈</a><a href="#models">모델</a><a href="#new">신차·사전예약</a><a href="#price">가격·프로모션</a><a href="#stock">전국 재고</a><a href="#report">이달의 구매가이드</a><a href="#card">카드혜택</a><a href="#mou">MOU 확인</a><a href="#quote">견적 문의</a><a data-kakao>카톡 상담 ↗</a>
+</div>
+
+<!-- ================= HOME ================= -->
+<main data-view="home" id="top">
+<section class="hero" aria-label="대표 화면">
+  <div class="slide on">
+    <div class="txt">
+      <div class="eyebrow">한성자동차 수원전시장 · 천재현 부장</div>
+      <h1>벤츠의 모든 답,<br>벤츠천재에게.</h1>
+      <p>111개 트림의 가격과 사양부터 이번 달 조건, 계약과 출고까지. 처음부터 끝까지 한 사람이 책임지고 상담해 드립니다.</p>
+      <div class="btns"><a class="pill black" data-kakao>카톡으로 견적 받기</a><a class="pill line" href="#models">모델 전체 보기</a></div>
+    </div>
+    <div class="pic"><img src="img/p98.webp" alt="S-Class"></div>
+  </div>
+  <div class="slide">
+    <div class="txt">
+      <div class="eyebrow">사전 예약 · Electric</div>
+      <h2>The all-new<br>electric GLB</h2>
+      <p>넉넉하고 활용도 높은 실내는 그대로, 이제는 전기로. 가족의 일상부터 주말의 먼 길까지 함께하는 전기 SUV.</p>
+      <div class="price">GLB 250+ electric · <b>6,990만원</b></div>
+      <div class="btns"><a class="pill black" data-sms="사전예약 문의: The all-new electric GLB">사전예약 문의</a><a class="pill line" href="https://www.mercedes-benz.co.kr/passengercars/campaigns/electric-glb-pre-order.html" target="_blank" rel="noopener">공식 안내 ↗</a></div>
+    </div>
+    <div class="pic"><img src="img/p34.webp" alt="The all-new electric GLB"></div>
+  </div>
+  <div class="slide">
+    <div class="txt">
+      <div class="eyebrow">SUV &amp; Off-Roader</div>
+      <h2>The G-Class</h2>
+      <p>시대를 넘어 이어지는 오프로더의 기준. 디젤, 전기, AMG까지 G-Class의 모든 선택지를 비교해 드립니다.</p>
+      <div class="price">G 450 d · <b>1억 9,970만원</b>부터</div>
+      <div class="btns"><a class="pill black" data-sms="견적 문의: G-Class">견적 받기</a><a class="pill line" href="#models" data-goto="suv">SUV 모델 보기</a></div>
+    </div>
+    <div class="pic"><img src="img/p172.webp" alt="G-Class"></div>
+  </div>
+  <div class="hero-ctrl"><div class="wrap"><div class="dots" id="dots"></div><small>권장소비자가 · 2026.10.27 가격표 · 옵션가 제외</small></div></div>
+</section>
+
+<div class="quick">
+  <div class="wrap">
+    <a href="#quote"><svg viewBox="0 0 34 34"><rect x="6" y="4" width="22" height="26" rx="1"/><path d="M11 11h12M11 16h12M11 21h7"/></svg><div><b>견적 문의</b><span>월 납입금까지 계산</span></div></a>
+    <a data-booking target="_blank" rel="noopener"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="3"/><path d="M5 17h9M20 17h9M17 20v9"/></svg><div><b>시승 신청 ↗</b><span>네이버 예약으로 바로 신청</span></div></a>
+    <a href="#soon"><svg viewBox="0 0 34 34"><rect x="5" y="7" width="24" height="22" rx="1"/><path d="M5 13h24M11 4v6M23 4v6M12 20l3 3 6-6"/></svg><div><b>출시 예정·사전계약</b><span>신차 소식 먼저 받기</span></div></a>
+    <a href="#quote" data-trade="1"><svg viewBox="0 0 34 34"><path d="M6 13h20l-5-5M28 21H8l5 5"/></svg><div><b>내 차 팔기</b><span>트레이드인 매입가 확인</span></div></a>
+  </div>
+</div>
+<div class="quick quick2">
+  <div class="wrap">
+    <a href="http://pf.kakao.com/_exdjNX" target="_blank" rel="noopener"><svg viewBox="0 0 34 34"><path d="M17 6C10.4 6 5 10.2 5 15.3c0 3.3 2.2 6.2 5.6 7.8l-1.2 4.6 5.2-3.4c.8.1 1.6.2 2.4.2 6.6 0 12-4.2 12-9.2S23.6 6 17 6z"/><path d="M11.5 13.5v4M21.5 13.5v4M14.5 13.5h3v4"/></svg><div><b>카카오톡 채널 바로가기 ↗</b><span>채널 추가하고 소식 받기</span></div></a>
+    <a href="https://youtube.com/channel/UCVjxGSLlQpc1DMJ7kTbgXoQ?si=OaNDEHh4xvon8kHE" target="_blank" rel="noopener"><svg viewBox="0 0 34 34"><rect x="4" y="8" width="26" height="18" rx="5"/><path d="M14.5 13v8l6.5-4z"/></svg><div><b>유튜브로 만나기 ↗</b><span>시승기·차종 비교 영상</span></div></a>
+    <a href="https://www.instagram.com/star_mercedes/" target="_blank" rel="noopener"><svg viewBox="0 0 34 34"><rect x="5" y="5" width="24" height="24" rx="7"/><circle cx="17" cy="17" r="5.5"/><circle cx="23.5" cy="10.5" r="1"/></svg><div><b>인스타그램 ↗</b><span>출고 현장·신차 소식</span></div></a>
+    <a href="https://blog.naver.com/benz_chunjae" target="_blank" rel="noopener"><svg viewBox="0 0 34 34"><rect x="5" y="5" width="24" height="24" rx="3"/><path d="M12 11h3.5l3.5 6V11h3v12h-3.5L15 17v6h-3z"/></svg><div><b>네이버 블로그 ↗</b><span>견적·구매 후기 정리</span></div></a>
+  </div>
+</div>
+
+<section class="sec" id="consultant">
+  <div class="wrap who-grid">
+    <div class="who-ph"><img src="img/profile.webp" alt="천재현 부장"></div>
+    <div class="who-txt">
+      <div class="eyebrow">Your consultant</div>
+      <h2>천재현 부장</h2>
+      <div class="nick">벤츠천재 · 메르세데스-벤츠 공식딜러 한성자동차(주) 수원전시장</div>
+      <blockquote>“가격이 모두 같다면, 비교할 것은 가장 가까이에서 고객님을 챙길 수 있는 사람입니다.<br>특별한 사후 관리 같은 건 없습니다.<br>전화 잘 받고, 응대 잘해드리는 게 최고입니다.”</blockquote>
+      <div class="cinfo">
+        <div><span>휴대폰</span><a href="tel:01063373652">010-6337-3652</a></div>
+        <div><span>카카오톡</span><a data-kakao>오픈채팅 상담 ↗</a></div>
+        <div><span>이메일</span><a href="mailto:jae-hyun.chun@hansung.co.kr">jae-hyun.chun@hansung.co.kr</a></div>
+        <div><span>전시장 대표 (재직 확인)</span><a href="tel:0317405000">031-740-5000</a></div>
+        <div><span>전시장</span><p>경기 용인시 기흥구 중부대로 23-2</p></div>
+        <div><span>시승·상담 예약</span><a data-booking target="_blank" rel="noopener">네이버 예약 ↗</a></div>
+      </div>
+      <div class="btns"><a class="pill black" href="tel:01063373652">전화 상담</a><a class="pill kakao" data-kakao>카톡 상담</a><a class="pill line" data-sms="상담 받고 싶습니다.%0A관심 차종: ">문자 상담</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec grey" id="new">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div><div class="eyebrow">New &amp; Pre-order</div><h2>지금, 가장 먼저 볼 벤츠.</h2></div>
+      <p>공식 사전예약이 진행 중인 신차입니다. 출고 일정과 조건은 확정되는 대로 가장 먼저 안내해 드립니다.</p>
+    </div>
+    <div class="news" id="news"></div>
+  </div>
+</section>
+
+<section class="sec" id="models">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div><div class="eyebrow">Models</div><h2>어떤 벤츠를 찾으세요?</h2></div>
+      <p>모델을 누르면 트림별 가격을 보고 바로 견적을 요청할 수 있습니다. 이번 달 할인은 <a class="lnk" href="#price">가격·프로모션</a>에서 확인하세요.</p>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="tools">
+      <label class="search"><input id="q" type="search" placeholder="차종 검색 · E-Class, GLC, AMG…" aria-label="차종 검색"><span aria-hidden="true">⌕</span></label>
+      <small id="count"></small>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>일치하는 차종이 없습니다. 다른 이름으로 검색해 주세요.</div>
+    <p class="note">가격은 메르세데스-벤츠 권장소비자가(2026.10.27 가격표) 기준이며 옵션가는 제외되어 있습니다.</p>
+  </div>
+</section>
+
+<section class="sec dark" id="soon">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div><div class="eyebrow">Coming soon · 27년식</div><h2>곧 만나게 될 벤츠.</h2></div>
+      <p>가격이 공개되지 않은 출시 예정 모델입니다. 출시일, 가격, 사전계약 조건이 나오면 가장 먼저 알려드립니다.</p>
+    </div>
+    <div class="rail" id="rail"></div>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div><div class="eyebrow">How to buy</div><h2>상담부터 출고까지,<br>한 사람이 끝까지.</h2></div>
+      <p>이번 달 조건과 추천 모델은 <a class="lnk" href="#report">이달의 구매가이드</a>에 정리해 두었습니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>01</b><h4>상담</h4><p>용도와 예산, 원하는 색상과 시기를 듣고 맞는 트림을 추천합니다.</p></div>
+      <div class="step"><b>02</b><h4>견적</h4><p>이번 달 할인과 금융 조건으로 월 납입금까지 계산합니다.</p></div>
+      <div class="step"><b>03</b><h4>계약</h4><p>계약금과 함께 차량을 계약하고 배정 순서를 확보합니다.</p></div>
+      <div class="step"><b>04</b><h4>배정</h4><p>재고 또는 입항 일정에 맞춰 원하는 사양을 배정받습니다.</p></div>
+      <div class="step"><b>05</b><h4>금융·보험</h4><p>할부, 리스, 렌트 중 고른 방식으로 승인과 보험을 준비합니다.</p></div>
+      <div class="step"><b>06</b><h4>등록</h4><p>잔금 납부 후 번호판 등록과 용품 장착을 진행합니다.</p></div>
+      <div class="step"><b>07</b><h4>출고</h4><p>직접 차량을 전달하고 주요 기능을 하나씩 설명해 드립니다.</p></div>
+    </div>
+    <div class="fin">
+      <div><h4>할부</h4><span class="who">고객 명의</span><ul><li>주행거리 제한 없음</li><li>만기 시 완전 소유</li><li>선수금·기간 자유롭게 설계</li></ul></div>
+      <div><h4>금융리스</h4><span class="who">파이낸셜 명의</span><ul><li>취득세 포함 구조</li><li>만기 시 인수</li><li>사업자 비용 처리 상담</li></ul></div>
+      <div><h4>운용리스</h4><span class="who">파이낸셜 명의</span><ul><li>연 2~3만km 약정</li><li>만기 시 반납·인수·재리스</li><li>월 납입금 부담 완화</li></ul></div>
+      <div><h4>장기렌트</h4><span class="who">렌터카 명의</span><ul><li>보험·세금 포함</li><li>렌터카(하·허·호) 번호판</li><li>관리 부담 최소화</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="quote">
+  <div class="wrap qwrap">
+    <div class="qside">
+      <div class="eyebrow">Quote request</div>
+      <h2>이번 달 견적,<br>바로 받아보세요.</h2>
+      <p>아래 내용을 채우면 문자나 카톡으로 바로 보낼 수 있게 정리됩니다. 차종만 정해도 할인·금융 조건으로 월 납입금까지 계산해 드립니다.</p>
+      <div class="contact">
+        <div><span>휴대폰</span><a href="tel:01063373652">010-6337-3652</a></div>
+        <div><span>카카오톡</span><a data-kakao>오픈채팅 상담 ↗</a></div>
+        <div><span>시승 예약</span><a data-booking target="_blank" rel="noopener">네이버 예약 ↗</a></div>
+        <div><span>이메일</span><a href="mailto:jae-hyun.chun@hansung.co.kr">jae-hyun.chun@hansung.co.kr</a></div>
+      </div>
+    </div>
+    <form class="q" id="qform" novalidate>
+      <div class="fld"><label for="f-name">성함</label><input id="f-name" placeholder="홍길동"></div>
+      <div class="fld"><label for="f-region">지역</label><input id="f-region" placeholder="예: 수원, 용인"></div>
+      <div class="fld full"><label for="f-model">관심 차종·트림</label><select id="f-model"><option value="">아직 정하지 않았어요</option></select></div>
+      <div class="fld"><label for="f-pay">구매 방식</label><select id="f-pay"><option>상담 후 결정</option><option>현금</option><option>할부</option><option>금융리스</option><option>운용리스</option><option>장기렌트</option></select></div>
+      <div class="fld"><label for="f-when">출고 희망 시기</label><select id="f-when"><option>정해지지 않음</option><option>이번 달</option><option>3개월 안</option><option>6개월 안</option><option>신차 출시 후</option></select></div>
+      <div class="fld full"><label>해당되는 혜택 (여러 개 선택)</label>
+        <div class="chips" id="chips">
+          <button type="button">벤츠 재구매</button><button type="button" data-t="1">타던 차 트레이드인</button><button type="button">다른 브랜드 보유</button><button type="button">회사 제휴(MOU)</button><button type="button">법인·개인사업자</button><button type="button">재고·전시차 관심</button>
+        </div>
+      </div>
+      <div class="trade" id="trade">
+        <div class="fld"><label for="t-car">타던 차량</label><input id="t-car" placeholder="예: E 300 4MATIC"></div>
+        <div class="fld"><label for="t-year">최초 등록 연도</label><select id="t-year"><option>2026년</option><option>2025년</option><option>2024년</option><option>2023년</option><option selected>2022년</option><option>2021년</option><option>2020년</option><option>2019년</option><option>2018년 이전</option></select></div>
+        <div class="fld"><label for="t-km">주행거리</label><select id="t-km"><option>1만km 미만</option><option>3만km 미만</option><option selected>5만km 미만</option><option>7만km 미만</option><option>9만km 미만</option><option>11만km 미만</option><option>13만km 미만</option><option>15만km 미만</option><option>15만km 이상</option></select></div>
+      </div>
+      <div class="fld full"><label for="f-memo">원하는 색상·궁금한 점</label><textarea id="f-memo" placeholder="예: 옵시디언 블랙 / 베이지 시트, 월 납입금 150만원 이내"></textarea></div>
+      <div class="qact">
+        <a class="pill white" id="sendSms" href="#" target="_blank" rel="noopener">문자로 견적 요청</a>
+        <button type="button" class="pill kakao" id="kakaoBtn">복사 후 카톡 상담</button>
+        <button type="button" class="pill line-w" id="copyBtn">내용만 복사</button>
+        <span class="toast" id="toast"></span>
+      </div>
+      <div class="fld full"><label for="qprev">보낼 내용 (직접 고쳐 쓰셔도 됩니다)</label><textarea class="qprev" id="qprev" rows="9"></textarea></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec grey" id="catalog">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div><div class="eyebrow">Catalogue</div><h2>공식 카탈로그</h2></div>
+      <p>메르세데스-벤츠 코리아 공식 카탈로그(PDF)로 바로 연결됩니다.</p>
+    </div>
+    <div class="cat-list" id="catlist"></div>
+  </div>
+</section>
+</main>
+
+<!-- ================= PRICE ================= -->
+<main data-view="price" hidden>
+  <div class="phead"><div class="wrap">
+    <div class="eyebrow" id="pMonth">Price &amp; Promotion</div>
+    <h1>차종별 가격과<br>이번 달 구매 조건.</h1>
+    <p>연식별 기본 할인, 벤츠파이낸셜(MBF) 이용 조건, 추가 혜택까지 이번 달 판매조건을 그대로 정리했습니다. 정확한 금액은 재고와 구매 방식에 맞춰 다시 계산해 드립니다.</p>
+    <div class="btns"><a class="pill kakao" data-kakao>카톡으로 조건 받기</a><a class="pill line-w" href="#quote">견적 문의</a></div>
+  </div></div>
+  <section class="sec" style="padding-top:56px"><div class="wrap">
+    <div class="notice" id="pNotice"></div>
+    <div class="gloss">
+      <div><b>기본할인</b><span>누구나 받는 이번 달 기본 할인율</span></div>
+      <div><b>MBF 할부 금리</b><span>벤츠파이낸셜 할부 이용 시 금리</span></div>
+      <div><b>운용리스 추가</b><span>벤츠파이낸셜 운용리스 이용 시 추가 할인</span></div>
+      <div><b>타 브랜드 +</b><span>다른 브랜드 차량 보유 시 추가 혜택(콘퀘스트)</span></div>
+      <div><b>MBK WP</b><span>메르세데스-벤츠 워런티 패키지(보증 연장)</span></div>
+    </div>
+    <div class="tabs" id="pYears"></div>
+    <div class="tools">
+      <label class="search"><input id="pq" type="search" placeholder="모델 검색 · E 200, GLC 300, GLE…" aria-label="모델 검색"><span aria-hidden="true">⌕</span></label>
+      <small id="pCount"></small>
+    </div>
+    <div class="chipbar" id="pChips"></div>
+    <div id="pTables"></div>
+  </div></section>
+</main>
+
+<!-- ================= STOCK ================= -->
+<main data-view="stock" hidden>
+  <div class="phead"><div class="wrap">
+    <div class="eyebrow">National inventory</div>
+    <h1>원하는 차,<br>재고부터 확인하세요.</h1>
+    <p>전국 판매 가능 재고를 차종·연식·색상별로 정리했습니다. 실제 배정 가능 여부와 출고 일정은 상담 시 바로 확인해 드립니다.</p>
+    <div class="btns"><a class="pill kakao" data-kakao>원하는 색상 문의</a><a class="pill line-w" href="#quote">견적 문의</a></div>
+  </div></div>
+  <section class="sec" style="padding-top:56px"><div class="wrap">
+    <div class="tools">
+      <label class="search"><input id="sq" type="search" placeholder="차종·색상 검색 · E 200, 옵시디언 블랙…" aria-label="재고 검색"><span aria-hidden="true">⌕</span></label>
+      <small id="sDate"></small>
+    </div>
+    <div class="chipbar" id="sChips"></div>
+    <div id="sList"></div>
+  </div></section>
+</main>
+
+<!-- ================= REPORT ================= -->
+<main data-view="report" hidden>
+  <div class="phead"><div class="wrap">
+    <div class="eyebrow" id="rMonth">Monthly buying guide</div>
+    <h1 id="rTitle">이달의 구매가이드</h1>
+    <p id="rSub">벤츠천재가 매달 직접 정리하는 구매 가이드입니다.</p>
+    <div class="btns"><a class="pill kakao" data-kakao>이번 달 조건 물어보기</a><a class="pill line-w" href="#price">가격·프로모션 보기</a></div>
+  </div></div>
+  <div class="pnav"><div class="wrap" id="rNav"></div></div>
+  <section class="sec" style="padding-top:64px"><div class="wrap">
+    <p class="rlead" id="rLead"></p>
+    <div class="rmeta" id="rMeta"></div>
+    <div id="rSecs" style="margin-top:56px"></div>
+    <div id="rFocusWrap" style="margin-top:40px">
+      <div class="sec-hd"><div><div class="eyebrow">Focus models</div><h2>이번 달 눈여겨볼 모델</h2></div></div>
+      <div class="news" id="rFocus"></div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ================= CARD ================= -->
+<main data-view="card" hidden>
+  <div class="phead"><div class="wrap">
+    <div class="eyebrow">Mercedes-Benz × Shinhan Card</div>
+    <h1>차량 대금,<br>카드로 결제하는 방법.</h1>
+    <p>벤츠는 결제 단계에 따라 쓸 수 있는 카드가 다릅니다. 계약 전에 한 번만 확인해 두시면 출고 날 당황하실 일이 없습니다.</p>
+    <div class="rule">
+      <div><small>STEP 1 · 계약금</small><h3>계약금은 일반 카드</h3><p>계약할 때 내는 계약금은 가지고 계신 일반 신용카드로 결제하실 수 있습니다.</p><span class="big">모든 카드 가능</span></div>
+      <div class="sh"><small>STEP 2 · 인도금</small><h3>인도금 카드 결제는 신한카드만</h3><p>계약금을 뺀 나머지 인도금(잔금)을 카드로 결제하시려면 신한 벤츠카드만 가능합니다.</p><span class="big">신한 벤츠카드 전용</span></div>
+    </div>
+    <div class="flow">
+      <div><b>01</b><h4>계약</h4><p>계약금 결제 · 일반 카드 가능</p></div>
+      <div><b>02</b><h4>카드 준비</h4><p>출고 3~4일 전까지 신한 벤츠카드 발급과 결제 한도 준비</p></div>
+      <div><b>03</b><h4>인도금 결제 · 출고</h4><p>안내에 따라 인도금을 신한 벤츠카드로 결제하고 출고</p></div>
+    </div>
+  </div></div>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-hd"><div><div class="eyebrow">Payment limit</div><h2>결제 한도, 이렇게 준비하세요.</h2></div><p>차량 대금은 평소 카드 한도보다 크기 때문에, 아래 두 방법 중 하나로 한도를 먼저 확보해야 합니다.</p></div>
+    <div class="ways">
+      <div class="way"><span class="tag">추천 · 일시불</span><h3>선입금 카드결제</h3><p>신한은행 가상계좌에 결제할 금액을 먼저 넣어 한도를 만든 뒤 카드로 결제하는 방식입니다.</p>
+        <ol><li>결제 금액과 같은 금액으로 한도 신청</li><li>안내받은 가상계좌로 입금 (입금 즉시 한도 반영)</li><li>천재현 부장 안내에 따라 카드 결제</li></ol>
+        <p style="font-size:13px;color:var(--muted)">입금일 포함 3영업일 안에 결제해 주세요. 주거래 은행의 이체 한도도 미리 확인해 두시면 좋습니다.</p>
+        <div style="margin-top:20px"><a class="pill black" href="https://mycar.shinhancard.com/adp/ADPFM206N/ADPFM206R02.shc" target="_blank" rel="noopener">선입금 카드결제 신청 ↗</a></div></div>
+      <div class="way"><span class="tag">단기 할부 이용 시</span><h3>자동차 추가한도</h3><p>평소 카드 한도와 별도로 자동차 구매용 한도를 일시적으로 받아 결제하는 방식입니다.</p>
+        <ol><li>자동차 구매 한도 조회·신청</li><li>한도 승인 내용 확인</li><li>천재현 부장 안내에 따라 카드 결제</li></ol>
+        <p style="font-size:13px;color:var(--muted)">한도가 부족하게 나오면 선입금 카드결제로 진행하시면 됩니다.</p>
+        <div style="margin-top:20px"><a class="pill black" href="https://mycar.shinhancard.com/adp/ADPFM206N/ADPFM206R07.shc" target="_blank" rel="noopener">자동차 추가한도 신청 ↗</a></div></div>
+    </div>
+  </div></section>
+
+  <section class="sec grey"><div class="wrap">
+    <div class="sec-hd"><div><div class="eyebrow">Card selection</div><h2>어떤 카드를 만들까요?</h2></div><p>메르세데스-벤츠 신한카드는 세 가지입니다. 결제 금액과 평소 카드 사용 패턴에 맞춰 골라 드립니다.</p></div>
+    <div class="cards3">
+      <div class="ccard m"><div class="face"><span>MERCEDES-BENZ · SHINHAN</span><b>MANUFAKTUR</b></div><div class="bd"><h3>마누팍투어</h3><div class="fee">연회비 70만원</div>
+        <dl><div><dt>할인형</dt><dd>국내 0.7% 할인 · 연 1회 55만 포인트 Gift</dd></div><div><dt>스카이패스형</dt><dd>1,500원당 1마일 · 연 1회 대한항공 30,000마일 Gift</dd></div></dl>
+        <a class="pill line" href="https://www.shinhancard.com/pconts/html/card/apply/family/1238025_2215.html" target="_blank" rel="noopener">카드 신청·조건 확인 ↗</a></div></div>
+      <div class="ccard e"><div class="face"><span>MERCEDES-BENZ · SHINHAN</span><b>EXCLUSIVE</b></div><div class="bd"><h3>익스클루시브</h3><div class="fee">연회비 20만원</div>
+        <dl><div><dt>할인형</dt><dd>국내 0.7% 할인 · 연 1회 12만 포인트 Gift</dd></div><div><dt>스카이패스형</dt><dd>1,500원당 1마일 · 연 1회 대한항공 6,000마일 Gift</dd></div></dl>
+        <a class="pill line" href="https://www.shinhancard.com/pconts/html/card/apply/family/1238021_2215.html" target="_blank" rel="noopener">카드 신청·조건 확인 ↗</a></div></div>
+      <div class="ccard a"><div class="face"><span>MERCEDES-BENZ · SHINHAN</span><b>AVANTGARDE</b></div><div class="bd"><h3>아방가르드</h3><div class="fee">연회비 8만원</div>
+        <dl><div><dt>할인형</dt><dd>국내 0.5% 할인 · 연 1회 5만 포인트 Gift</dd></div><div><dt>참고</dt><dd>할인율은 전월 이용금액에 따라 달라집니다.</dd></div></dl>
+        <a class="pill line" href="https://www.shinhancard.com/pconts/html/card/apply/family/1238016_2215.html" target="_blank" rel="noopener">카드 신청·조건 확인 ↗</a></div></div>
+    </div>
+    <p class="note">할인·마일리지는 카드 유형과 전월 이용실적에 따라 달라지고, 연간 Gift는 별도 이용 조건이 있습니다. 카드사 조건은 바뀔 수 있으니 신청 전에 신한카드에서 한 번 더 확인해 주세요.</p>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-hd"><div><div class="eyebrow">Installment</div><h2>벤츠 신한카드 할부 금리</h2></div><p>2026년 10월 기준입니다. 신청 시점의 적용 금리와 조건을 꼭 확인해 주세요.</p></div>
+    <div class="rates"><div><span>12개월</span><b>연 4.1%</b></div><div><span>24개월</span><b>연 4.2%</b></div><div><span>36개월</span><b>연 4.3%</b></div><div><span>48개월</span><b>연 4.4%</b></div><div><span>60개월</span><b>연 4.5%</b></div></div>
+    <div style="margin-top:40px;display:flex;gap:10px;flex-wrap:wrap"><a class="pill kakao" data-kakao>카드 결제 상담하기</a><a class="pill line" href="https://www.shinhancard.com/mob/MOBFM001N/MOBFM001C01.shc" target="_blank" rel="noopener">기프트 옵션 신청 ↗</a></div>
+  </div></section>
+</main>
+
+<!-- ================= MOU ================= -->
+<main data-view="mou" hidden>
+  <div class="phead"><div class="wrap">
+    <div class="eyebrow">Corporate partnership</div>
+    <h1>다니시는 회사,<br>벤츠 제휴사인지 확인하세요.</h1>
+    <p>회사 제휴(MOU) 대상이면 추가 혜택을 받을 수 있습니다. 회사 이름을 검색해 보시고, 목록에 없어도 확인해 드리니 편하게 물어보세요.</p>
+  </div></div>
+  <section class="sec"><div class="wrap">
+    <div class="mbox2">
+      <div class="eyebrow">MOU search</div>
+      <label class="search"><input id="mq" type="search" placeholder="회사 이름을 입력하세요" aria-label="회사 이름 검색" autocomplete="off"></label>
+      <small style="color:var(--muted);font-size:13px" id="mInfo"></small>
+      <div class="mres" id="mRes"></div>
+    </div>
+  </div></section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><b>벤츠천재천재현</b><small>BENZ GENIUS</small></div>
+      <nav><a data-kakao>카톡 상담 ↗</a><a data-booking target="_blank" rel="noopener">시승 예약 ↗</a><a href="#price">가격·프로모션</a><a href="#stock">전국 재고</a><a href="#report">이달의 구매가이드</a><a href="#card">카드혜택</a><a href="#mou">MOU 확인</a></nav>
+    </div>
+    <div class="bot">
+      <div>운영 · 한성자동차(주) 수원전시장 세일즈 컨설턴트 천재현 · 010-6337-3652 · jae-hyun.chun@hansung.co.kr</div>
+      <div>한성자동차(주) 수원전시장 · 경기 용인시 기흥구 중부대로 23-2 · Tel 031-740-5000</div>
+      <p>© 2026 벤츠천재천재현 · 천재현. 이 사이트의 글·구성·자료를 무단으로 복제하거나 AI 학습·수집에 사용하는 것을 금합니다.</p>
+      <p>이 사이트는 세일즈 컨설턴트 개인이 운영하는 상담 채널이며, 메르세데스-벤츠 코리아 또는 한성자동차의 공식 사이트가 아닙니다. 가격은 메르세데스-벤츠 권장소비자가(2026.10.27 가격표) 기준이며 옵션가는 제외되어 있습니다. 차량 사진은 실제 판매 사양과 다를 수 있습니다.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="fbar"><a href="tel:01063373652">전화</a><a data-booking target="_blank" rel="noopener">시승 예약</a><a data-kakao>카톡 상담</a></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mbox">
+    <button class="close" id="mClose" aria-label="닫기">×</button>
+    <div class="mtop"><div class="ph2"><img id="mImg" alt=""></div><div class="info"><div class="eyebrow" id="mCat"></div><h3 id="mTitle"></h3><div id="mFrom"></div></div></div>
+    <div class="trims">
+      <table><thead><tr><th>트림</th><th style="text-align:right;padding-right:20px">권장소비자가</th><th></th></tr></thead><tbody id="mRows"></tbody></table>
+      <div class="mfoot"><small>옵션가 제외 · 2026.10.27 가격표 기준 · <a class="lnk" href="#price">이번 달 할인 보기</a></small><a class="lnk" id="mCatalog" target="_blank" rel="noopener">공식 카탈로그 PDF ↗</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== 복제 방지 ===== */
+(function(){
+  const ORIGIN='https://chunternet-alt.github.io/mb1000/';
+  const ALLOWED=['localhost','127.0.0.1','chunternet-alt.github.io']; /* 직접 산 도메인을 연결하면 여기에 추가 (예: 'benzchunjae.com') */
+  const h=location.hostname;
+  const ok=!h||ALLOWED.some(a=>h===a||h.endsWith('.'+a))||/claude|anthropic/.test(h);
+  if(!ok){document.addEventListener('DOMContentLoaded',()=>{const d=document.createElement('div');d.className='guard';d.innerHTML='이 페이지는 <b>벤츠천재천재현</b>의 무단 복제본입니다.<br><a href="'+ORIGIN+'" style="color:#fee500;text-decoration:underline">원본 홈페이지로 이동</a>';document.body.innerHTML='';document.body.appendChild(d)})}
+  document.addEventListener('contextmenu',e=>{if(!e.target.closest('input,textarea,.cinfo,.contact,.qprev'))e.preventDefault()});
+  document.addEventListener('dragstart',e=>{if(e.target.tagName==='IMG')e.preventDefault()});
+  document.addEventListener('copy',e=>{const t=String(window.getSelection()||'');if(!t||e.target.closest&&e.target.closest('input,textarea'))return;e.preventDefault();e.clipboardData.setData('text/plain',t+'\n\n— 출처: 벤츠천재천재현 천재현 부장 '+ORIGIN)});
+  document.addEventListener('keydown',e=>{const k=(e.key||'').toLowerCase();if((e.ctrlKey||e.metaKey)&&(k==='s'||k==='u'))e.preventDefault()});
+})();
+</script>
+<div class="modal" id="inq" role="dialog" aria-modal="true" aria-labelledby="inqT">
+  <div class="mbox ibox">
+    <button class="close" id="inqClose" aria-label="닫기">×</button>
+    <div class="eyebrow">문의하기</div>
+    <h3 id="inqT">문의 내용</h3>
+    <p class="isub" id="inqSub"></p>
+    <div class="ifl"><label for="iName">성함</label><input id="iName" placeholder="홍길동"></div>
+    <div class="ifl"><label for="iTel">연락처</label><input id="iTel" placeholder="010-0000-0000" inputmode="tel"></div>
+    <div class="ifl"><label for="iMemo">메모 (원하는 색상, 출고 시기, 궁금한 점 등)</label><textarea id="iMemo" rows="4" placeholder="예: 폴라 화이트 / 베이지 시트, 12월 출고 희망, 월 납입금이 궁금합니다"></textarea></div>
+    <div class="ibtns">
+      <button class="pill kakao" id="iKakao">복사 후 카톡으로 보내기</button>
+      <a class="pill black" id="iSms" href="#" target="_blank" rel="noopener">문자로 보내기</a>
+      <a class="pill line" href="tel:01063373652">전화 010-6337-3652</a>
+    </div>
+    <p class="itoast" id="iToast"></p>
+  </div>
+</div>
+<script src="data/models.js"></script>
+<script>
+/* ===== 연락처·링크 설정 (여기만 바꾸면 전체 반영) ===== */
+const PHONE='01063373652';
+const KAKAO='https://open.kakao.com/o/s31OSxlh';
+const BOOKING='https://m.booking.naver.com/booking/13/bizes/1083927/items/6350252';
+
+
+const won=v=>{if(v==null)return'가격 문의';v=Math.round(v);const e=Math.floor(v/10000),r=v%10000;return(e?e+'억'+(r?' ':''):'')+(r?r.toLocaleString('ko-KR'):'')+'만원'};
+const minP=m=>{const p=m[5].map(t=>t[1]).filter(x=>x!=null);return p.length?Math.min(...p):null};
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const smsHref=body=>'sms:'+PHONE+'?body='+encodeURIComponent('[벤츠천재 홈페이지 문의]\n'+body+'\n성함: ');
+const byId=Object.fromEntries(M.map(m=>[m[0],m]));
+const $=id=>document.getElementById(id);
+const tkey=t=>t[0]+(t[2]?' (27)':'');
+
+function bindLinks(root){
+  root.querySelectorAll('[data-sms]').forEach(a=>{a.href='#';a.setAttribute('role','button')});
+  root.querySelectorAll('[data-kakao]').forEach(a=>{a.href=KAKAO;a.target='_blank';a.rel='noopener'});
+  root.querySelectorAll('[data-booking]').forEach(a=>{a.href=BOOKING});
+}
+
+/* hero slider */
+const slides=[...document.querySelectorAll('.slide')],dots=$('dots');let cur=0,timer;
+slides.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label',(i+1)+'번 화면');b.onclick=()=>show(i);dots.appendChild(b)});
+function show(i){slides[cur].classList.remove('on');dots.children[cur].classList.remove('on');cur=i;slides[cur].classList.add('on');void dots.children[cur].offsetWidth;dots.children[cur].classList.add('on');clearTimeout(timer);timer=setTimeout(()=>show((cur+1)%slides.length),7000)}
+show(0);
+
+/* home lists */
+$('news').innerHTML=NEWS.map(n=>{const m=byId[n[0]];return`<article class="ncard"><a class="ph" href="#" data-open="${n[0]}"><img src="img/p${m[3]}.webp" alt="${esc(n[2])}" loading="lazy"></a><div class="tag">${n[1]}</div><h3>${esc(n[2])}</h3><p>${esc(n[3])}</p><div class="pr">${esc(n[4])}</div><div class="acts"><a class="lnk" data-sms="사전예약 문의: ${esc(n[2])}">사전예약 문의</a><a class="lnk g" href="${n[5]}" target="_blank" rel="noopener">공식 안내 ↗</a></div></article>`}).join('');
+let curCat='all';const tabs=$('tabs'),grid=$('grid'),q=$('q');
+tabs.innerHTML=CATS.map(([k,v])=>`<button role="tab" data-c="${k}" class="${k==='all'?'on':''}">${v}</button>`).join('');
+tabs.onclick=e=>{const b=e.target.closest('button');if(b)setCat(b.dataset.c)};
+function setCat(c){curCat=c;[...tabs.children].forEach(b=>b.classList.toggle('on',b.dataset.c===c));render()}
+q.oninput=render;
+const norm=s=>String(s).toLowerCase().replace(/[\s\-·]/g,'');
+function render(){
+  const s=norm(q.value.trim());
+  const list=M.filter(m=>(curCat==='all'||m[1]===curCat)&&(!s||norm(m[2]+m[5].map(t=>t[0]).join('')).includes(s)));
+  grid.innerHTML=list.map(m=>{const p=minP(m),n=m[5].length,ev=m[1]==='electric'||/EQ|electric/.test(m[2]);
+    return`<a class="mcard" href="#" data-open="${m[0]}"><div class="ph">${p==null?'<span class="badge">출시 예정</span>':ev?'<span class="badge ev">EV</span>':''}<img src="img/p${m[3]}.webp" alt="${esc(m[2])}" loading="lazy"></div><div class="cat">${CATNAME[m[1]]} · 트림 ${n}개</div><h3>${esc(m[2])}</h3><div class="from">${p?won(p)+'~<em>권장소비자가</em>':'가격 문의'}</div><span class="more">트림·가격 보기</span></a>`}).join('');
+  $('empty').hidden=!!list.length;
+  $('count').textContent=list.length+'개 모델 · '+list.reduce((a,m)=>a+m[5].length,0)+'개 트림';
+}
+render();
+$('rail').innerHTML=SOON.map(s=>`<article class="scard"><a class="ph" href="#" data-open="${s[0]}"><img src="img/p${s[3]}.webp" alt="${esc(s[1])}" loading="lazy"></a><div class="bd"><small>COMING SOON</small><h3>${esc(s[1])}</h3><p>${esc(s[2])}</p><a class="pill white" data-sms="출시 알림 신청: ${esc(s[1])}%0A출시일·가격·사전계약 조건 나오면 알려주세요.">출시 알림 받기</a></div></article>`).join('');
+const seen=new Set();$('catlist').innerHTML=M.filter(m=>m[4]&&!seen.has(m[4])&&seen.add(m[4])).map(m=>`<a href="${CAT_BASE+m[4]}" target="_blank" rel="noopener">${esc(m[2])}</a>`).join('');
+$('f-model').innerHTML+=CATS.slice(1).map(([k,v])=>`<optgroup label="${v}">`+M.filter(m=>m[1]===k).flatMap(m=>m[5].map(t=>`<option>${esc(t[0]+(t[2]&&t[1]==null?' (27년식)':'')+' · '+won(t[1]))}</option>`)).join('')+'</optgroup>').join('');
+
+/* modal */
+const modal=$('modal');
+function openModel(id){const m=byId[id];if(!m)return;const p=minP(m);
+  $('mImg').src='img/p'+m[3]+'.webp';$('mImg').alt=m[2];$('mCat').textContent=CATNAME[m[1]];$('mTitle').textContent=m[2];
+  $('mFrom').textContent=p?won(p)+'부터 · 트림 '+m[5].length+'개':'가격 공개 예정 · 트림 '+m[5].length+'개';
+  $('mRows').innerHTML=m[5].map(t=>`<tr><td>${esc(t[0])}${t[2]?'<span class="yr">27년식</span>':''}</td><td class="p">${won(t[1])}</td><td class="b"><a class="sbtn" data-sms="견적 문의: ${esc(t[0])}${t[2]?' (27년식)':''}">견적 받기</a></td></tr>`).join('');
+  const c=$('mCatalog');if(m[4]){c.href=CAT_BASE+m[4];c.hidden=false}else c.hidden=true;
+  modal.classList.add('open');document.body.style.overflow='hidden';bindLinks(modal)}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
+$('mClose').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o){e.preventDefault();openModel(o.dataset.open)}
+  const g=e.target.closest('[data-goto]');if(g)setCat(g.dataset.goto);
+  const t=e.target.closest('[data-trade]');if(t)setTrade(true);
+  if(e.target.closest('#mnav a'))$('mnav').classList.remove('open')});
+$('burger').onclick=()=>$('mnav').classList.toggle('open');
+
+/* quote form */
+const chips=$('chips'),trade=$('trade');
+function setTrade(on){trade.classList.toggle('on',on);chips.querySelector('[data-t]').classList.toggle('on',on);build()}
+chips.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.t)setTrade(!b.classList.contains('on'));else{b.classList.toggle('on');build()}};
+const v=id=>$(id).value.trim();
+function build(){
+  const ben=[...chips.querySelectorAll('.on')].map(b=>b.textContent);
+  let s='[벤츠천재 홈페이지 견적 요청]\n성함: '+v('f-name')+'\n지역: '+v('f-region')+'\n관심 차종: '+(v('f-model')||'미정')+'\n구매 방식: '+v('f-pay')+'\n출고 희망: '+v('f-when');
+  if(ben.length)s+='\n해당 혜택: '+ben.join(', ');
+  if(trade.classList.contains('on'))s+='\n타던 차: '+(v('t-car')||'-')+' · '+v('t-year')+' · '+v('t-km');
+  if(v('f-memo'))s+='\n메모: '+v('f-memo');
+  if(!qEdited)$('qprev').value=s;const out=$('qprev').value;$('sendSms').href='sms:'+PHONE+'?body='+encodeURIComponent(out);return out}
+let qEdited=false;$('qprev').addEventListener('input',()=>{qEdited=true;$('sendSms').href='sms:'+PHONE+'?body='+encodeURIComponent($('qprev').value)});
+$('qform').addEventListener('input',e=>{if(e.target.id!=='qprev')build()});$('qform').addEventListener('submit',e=>e.preventDefault());
+async function copy(s,ok,fail){try{await navigator.clipboard.writeText(s);$('toast').textContent=ok}catch(_){$('toast').textContent=fail}}
+$('copyBtn').onclick=()=>copy(build(),'복사했어요. 문자나 카톡에 붙여넣어 보내주세요 (010-6337-3652).','복사가 안 되면 아래 내용을 길게 눌러 복사해 주세요.');
+$('kakaoBtn').onclick=async()=>{await copy(build(),'복사했어요. 열리는 카톡 대화창에 붙여넣어 보내주세요.','카톡 대화창에 아래 내용을 직접 적어 보내주세요.');if(!window.open(KAKAO,'_blank','noopener'))location.href=KAKAO};
+build();
+
+/* ===== 문의 창 ===== */
+const inq=$('inq');let inqSubject='';
+function inqText(){return '[벤츠천재 홈페이지 문의]\n'+inqSubject+'\n성함: '+$('iName').value.trim()+'\n연락처: '+$('iTel').value.trim()+($('iMemo').value.trim()?'\n메모: '+$('iMemo').value.trim():'')}
+function inqSync(){$('iSms').href='sms:'+PHONE+'?body='+encodeURIComponent(inqText())}
+function openInq(subject){inqSubject=subject;const first=subject.split('\n')[0];$('inqT').textContent=first.replace(/^[^:]+:\s*/,'')||first;$('inqSub').textContent=subject;$('iToast').textContent='문자 버튼이 열리지 않으면 복사 후 카톡으로 보내거나 010-6337-3652로 전화 주세요.';inqSync();closeModal();inq.classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>$('iName').focus(),50)}
+function closeInq(){inq.classList.remove('open');document.body.style.overflow=''}
+['iName','iTel','iMemo'].forEach(id=>$(id).addEventListener('input',inqSync));
+$('inqClose').onclick=closeInq;inq.onclick=e=>{if(e.target===inq)closeInq()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeInq()});
+$('iKakao').onclick=async()=>{try{await navigator.clipboard.writeText(inqText());$('iToast').textContent='복사했어요. 열리는 카톡 대화창에 붙여넣어 보내주세요.'}catch(_){$('iToast').textContent='카톡 대화창에 위 내용을 적어 보내주세요.'}if(!window.open(KAKAO,'_blank','noopener'))location.href=KAKAO};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-sms]');if(!a)return;e.preventDefault();e.stopPropagation();openInq(decodeURIComponent(a.dataset.sms))},true);
+
+/* ===== 전화·문자 연결 보조 (claude.ai 화면 안에서는 바로 연결이 막힘) ===== */
+const tip=document.createElement('div');tip.className='calltip';tip.hidden=true;document.body.appendChild(tip);
+function showTip(kind,body){tip.innerHTML=`<b>${kind==='tel'?'전화':'문자'}가 바로 열리지 않으면</b><span>010-6337-3652</span><div><button class="pill white" id="ctCopy">${kind==='tel'?'번호 복사':'번호·내용 복사'}</button><button class="pill line-w" id="ctX">닫기</button></div>`;tip.hidden=false;
+  $('ctCopy').onclick=async()=>{try{await navigator.clipboard.writeText(kind==='tel'?'010-6337-3652':'010-6337-3652\n'+(body||''));$('ctCopy').textContent='복사했어요'}catch(_){}};$('ctX').onclick=()=>tip.hidden=true;clearTimeout(tip._t);tip._t=setTimeout(()=>tip.hidden=true,12000)}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="tel:"],a[href^="sms:"]');if(!a)return;const sms=a.href.startsWith('sms:');showTip(sms?'sms':'tel',sms?decodeURIComponent((a.href.split('body=')[1]||'')):'')});
+
+/* ===== data pages ===== */
+const getJSON=p=>fetch(p,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
+let PROMO=null,STOCK=null,MOU=null,REPORT=null;
+
+/* price */
+let pCat='all',pYear='27년식';
+const wn=v=>v==null?'-':Math.round(v).toLocaleString('ko-KR')+'원';
+function renderPrice(){
+  const P=PROMO||{};const G=P.groups||[];
+  $('pMonth').textContent=(P.month||'')+' · Price & Promotion';
+  $('pNotice').innerHTML=`<b>${esc(P.headline||'이번 달 조건은 확정되는 대로 반영합니다.')}</b>${P.updated?` <span style="color:var(--muted)">· ${esc(P.updated)}</span>`:''}${(P.notes||[]).length?'<ul>'+P.notes.map(n=>`<li>${esc(n)}</li>`).join('')+'</ul>':''}`;
+  if(!G.length){$('pYears').innerHTML='';$('pChips').innerHTML='';$('pTables').innerHTML='<div class="emptybox"><h3>이번 달 조건을 준비하고 있습니다.</h3><p>차종을 알려주시면 이번 달 조건으로 바로 계산해 드립니다.</p><div class="btns"><a class="pill kakao" data-kakao>카톡으로 조건 받기</a></div></div>';bindLinks($('pTables'));return}
+  const years=[...new Set(G.map(x=>x.year))];if(!years.includes(pYear))pYear=years[0];
+  $('pYears').innerHTML=years.map(y=>`<button data-y="${esc(y)}" class="${y===pYear?'on':''}">${esc(y)}</button>`).join('');
+  const gs=G.filter(x=>x.year===pYear);
+  $('pChips').innerHTML=[['all','전체'],...gs.map(x=>[x.cls,x.label])].map(([k,v])=>`<button data-k="${esc(k)}" class="${k===pCat?'on':''}">${esc(v)}</button>`).join('');
+  const s=norm($('pq').value.trim());let n=0;
+  const html=(s?G:gs).filter(x=>s||pCat==='all'||x.cls===pCat).map(x=>{const rows=x.rows.filter(r=>!s||norm(r.model).includes(s));if(!rows.length)return'';n+=rows.length;
+    return`<div class="ptable"><div class="th"><h3>${esc(x.label)}</h3><small>${esc(x.year)} · ${rows.length}개 모델</small></div><table><thead><tr><th>모델</th><th>차량가</th><th>기본할인</th><th>할인 금액</th><th>예상 차량가</th><th style="text-align:left">벤츠파이낸셜 · 추가 혜택</th></tr></thead><tbody>`+
+    rows.map(r=>{const base=r.after||r.before;const fin=(r.total!=null&&base)?base-r.total:null;
+      const mb=[r.mbf?`<span class="mbf">할부 금리 <em>${esc(r.mbf)}</em></span>`:'',r.lease?`<span class="mbf">운용리스 <em>${/^\d/.test(r.lease)?'추가 '+esc(r.lease):esc(r.lease)}</em></span>`:''].join('');
+      const tags=[r.cq?`<span class="tagx cq">${r.cq==='EW'?'타 브랜드 보유 · 연장보증(EW)':'타 브랜드 보유 +'+esc(r.cq)}</span>`:'',r.remark?`<span class="tagx rm">${esc(r.remark)}</span>`:''].join('');
+      return`<tr><td>${esc(r.model)}${r.edition?'<span class="tagx ed" style="margin-left:6px">에디션</span>':''}</td><td>${wn(base)}</td><td>${r.rate==null?'-':r.rate?'<span class="dc">'+r.rate+'%</span>':'0%'}</td><td>${r.total?'<span class="dc">-'+wn(r.total)+'</span>':'-'}</td><td class="final">${fin!=null&&r.total?wn(fin)+'<small>기본할인 반영</small>':'<a class="sbtn" data-sms="이번 달 조건 문의: '+esc(r.model)+' ('+esc(x.year)+')">조건 받기</a>'}</td><td class="rmk">${mb}${tags||(!mb?'<span style="color:var(--muted)">-</span>':'')}</td></tr>`}).join('')+'</tbody></table></div>'}).join('');
+  $('pCount').textContent=n+'개 모델';
+  $('pTables').innerHTML=html||'<div class="empty">일치하는 모델이 없습니다.</div>';bindLinks($('pTables'));
+}
+$('pChips').onclick=e=>{const b=e.target.closest('button');if(!b)return;pCat=b.dataset.k;renderPrice()};
+$('pYears').onclick=e=>{const b=e.target.closest('button');if(!b)return;pYear=b.dataset.y;pCat='all';renderPrice()};
+$('pq').oninput=()=>{pCat='all';renderPrice()};
+
+/* stock */
+let sCat='all';const ym=m=>{const[y,mm]=m.split('-');return y.slice(2)+'년 '+(+mm)+'월'};
+function sEarliest(i,base){const ks=Object.keys(i.months||{});if(!ks.length)return'';const k=ks[0];return k<=base?'즉시 출고':ym(k)+'부터'}
+function renderStock(){
+  const S=STOCK||{items:[]};const items=S.items||[];const base=S.base_month||'';
+  $('sDate').textContent=S.updated?'재고 기준 '+S.updated+' · '+(S.total||items.reduce((a,i)=>a+(i.qty||0),0)).toLocaleString('ko-KR')+'대 · '+items.length+'개 조합':'';
+  if(!items.length){$('sChips').innerHTML='';$('sList').innerHTML=`<div class="emptybox"><h3>재고 목록을 업데이트하고 있습니다.</h3><p>원하시는 차종과 색상, 출고 시기를 알려주시면 전국 재고에서 바로 찾아 드립니다.</p><div class="btns"><a class="pill kakao" data-kakao>카톡으로 재고 문의</a><a class="pill line" data-sms="재고 문의%0A차종: %0A원하는 색상: %0A출고 희망 시기: ">문자로 재고 문의</a></div></div>`;bindLinks($('sList'));return}
+  const models=[...new Set(items.map(i=>i.model))];
+  $('sChips').innerHTML=[['all','전체'],...models.map(x=>[x,x])].map(([k,v])=>`<button data-k="${esc(k)}" class="${k===sCat?'on':''}">${esc(v)}</button>`).join('');
+  const s=norm($('sq').value.trim());let idx=0;
+  const groups=models.filter(x=>sCat==='all'||x===sCat).map(x=>{const rows=items.filter(i=>i.model===x&&(!s||norm(i.trim+i.year+i.ext+i.int).includes(s)));if(!rows.length)return'';
+    const trims=[...new Set(rows.map(r=>r.trim+' · '+r.year))];
+    return`<div class="sgroup"><h3>${esc(x)} <small style="font-family:var(--sans);font-size:13px;color:var(--muted)">${rows.reduce((a,r)=>a+r.qty,0).toLocaleString('ko-KR')}대</small></h3>`+trims.map(tk=>{const rs=rows.filter(r=>r.trim+' · '+r.year===tk);
+      return`<div class="strim"><div class="stt">${esc(tk)}</div>`+rs.map(i=>{const id='st'+(idx++);const mk=Object.entries(i.months||{});const mx=Math.max(...mk.map(m=>m[1]),1);
+        return`<div class="srow2"><button class="shead" aria-expanded="false" aria-controls="${id}"><span class="sc"><i class="sw" style="background:${swatch(i.ext)}"></i>${esc(i.ext)}</span><span class="si">${esc(i.int)}</span><span class="se">${esc(sEarliest(i,base))}</span><span class="sq">${i.qty}대</span><span class="sv">⌄</span></button>
+        <div class="sdet" id="${id}" hidden><div class="sdh">출고 가능 월</div><div class="smonths">${mk.map(([m,q])=>`<div class="sm${m<=base?' now':''}"><span>${m<=base?'즉시 출고':ym(m)}</span><b style="--w:${Math.max(8,q/mx*100)}%"></b><em>${q}대</em></div>`).join('')}</div>
+        <div class="sact"><a class="sbtn" data-sms="재고 배정 문의: ${esc(i.trim)} ${esc(i.year)}%0A외장: ${esc(i.ext)} / 내장: ${esc(i.int)}%0A희망 출고 월: ">문자로 배정 문의</a> <a class="sbtn" data-kakao>카톡 문의</a></div></div></div>`}).join('')+'</div>'}).join('')+'</div>'}).join('');
+  $('sList').innerHTML=(groups||'<div class="empty">일치하는 재고가 없습니다. 원하는 조합을 문의해 주세요.</div>')+'<p class="note">출고 가능 월은 재고 기준일 현재 예정이며, 배정 상황에 따라 바뀔 수 있습니다. "즉시 출고"는 기준일에 이미 출고 가능한 차량입니다. 실제 배정은 상담 시 바로 확인해 드립니다.</p>';bindLinks($('sList'));
+}
+function swatch(c){const m=[['폴라 화이트','#f4f4f2'],['오팔라이트','#f1efe9'],['옵시디안','#151515'],['제트 블랙','#0d0d0d'],['코스모스','#111'],['스파클링 블랙','#1a1a1a'],['그라파이트','#4a4c50'],['셀레나이트','#6d7074'],['마운틴','#6f7377'],['알파인','#a9aaa6'],['클래식 그레이','#8f918e'],['하이 테크','#b8bbbe'],['하이테크','#b8bbbe'],['이리디움','#a7aaad'],['모하비','#b7b3aa'],['라벤더','#b8b3c9'],['노틱','#1f2c45'],['소다라이트','#2b3f6b'],['쉬어 블루','#3f6fa8'],['코트 다 쥐르','#1e5b9a'],['아쿠아 민트','#8fbfb4'],['엘바이트','#2f5d4a'],['가넷','#6d1a26'],['웜 그레이','#8a8178']];for(const[k,v]of m)if(c.includes(k))return v;return'#ccc'}
+$('sChips').onclick=e=>{const b=e.target.closest('button');if(!b)return;sCat=b.dataset.k;renderStock()};
+$('sq').oninput=()=>{sCat='all';renderStock()};
+$('sList').addEventListener('click',e=>{const h=e.target.closest('.shead');if(!h)return;const d=$(h.getAttribute('aria-controls'));const open=d.hidden;d.hidden=!open;h.setAttribute('aria-expanded',open);h.classList.toggle('open',open)});
+
+/* report */
+function renderReport(){
+  const R=REPORT;if(!R)return;
+  $('rMonth').textContent=(R.month||'')+' · Monthly buying guide';
+  $('rTitle').textContent=R.title||'이달의 구매가이드';
+  $('rSub').textContent='벤츠천재 '+(R.author||'천재현 부장')+'이 이번 달 조건을 직접 풀어 드립니다.';
+  $('rLead').textContent=R.lead||'';
+  $('rMeta').innerHTML=esc(R.author||'')+(R.updated?' · '+esc(R.updated):'')+(R.status==='draft'?'<span class="draft">이번 달 프로모션 반영 전</span>':'');
+  $('rNav').innerHTML=(R.sections||[]).map(s=>`<a href="#r-${esc(s.id)}" data-rs="${esc(s.id)}">${esc(s.title)}</a>`).join('');
+  $('rSecs').innerHTML=(R.sections||[]).map(s=>`<div class="rsec" id="r-${esc(s.id)}"><div><div class="tag">${esc(s.tag||'')}</div><h2>${esc(s.title)}</h2></div><div>${(s.body||[]).map(p=>`<p>${esc(p)}</p>`).join('')}${(s.points||[]).length?'<ul>'+s.points.map(p=>`<li>${esc(p)}</li>`).join('')+'</ul>':''}</div></div>`).join('');
+  const f=(R.focus||[]).filter(x=>byId[x.id]);$('rFocusWrap').hidden=!f.length;
+  $('rFocus').innerHTML=f.map(x=>{const m=byId[x.id],p=minP(m);return`<article class="ncard"><a class="ph" href="#" data-open="${m[0]}"><img src="img/p${m[3]}.webp" alt="${esc(m[2])}" loading="lazy"></a><div class="tag">${CATNAME[m[1]]}</div><h3>${esc(m[2])}</h3><p>${esc(x.why)}</p><div class="pr">${p?won(p)+'부터':'가격 문의'}</div><div class="acts"><a class="lnk" data-sms="이번 달 조건 문의: ${esc(m[2])}">이번 달 조건 받기</a></div></article>`}).join('');
+  bindLinks($('rFocus'));
+}
+$('rNav').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();const el=$('r-'+a.dataset.rs);if(el)window.scrollTo({top:el.getBoundingClientRect().top+scrollY-130,behavior:'smooth'})};
+
+/* MOU */
+function renderMou(){
+  const L=(MOU&&MOU.companies)||[];
+  $('mInfo').textContent=L.length?(MOU.updated?MOU.updated+' 기준 · ':'')+L.length.toLocaleString('ko-KR')+'개 법인 · 영문 약칭(SK, LG, CJ 등)으로도 검색됩니다':'제휴사 목록을 업데이트하고 있습니다. 회사 이름을 알려주시면 바로 확인해 드립니다.';
+  const mn=x=>norm(String(x).replace(/\(주\)|㈜|\(유\)|주식회사|유한회사|\(재\)|재단법인/g,''));
+  const s=mn($('mq').value.trim());
+  if(!s){$('mRes').innerHTML='';return}
+  const names=L.map(c=>typeof c==='string'?{name:c}:c);
+  const hits=names.filter(c=>mn(c.name).includes(s)||mn(c.alias||'').includes(s)).slice(0,20);
+  $('mRes').innerHTML=hits.length?hits.map(c=>`<div class="hit"><div><b>${esc(c.name)}</b>${c.note?`<div style="font-size:13px;color:var(--muted)">${esc(c.note)}</div>`:''}</div><span class="ok">제휴 확인</span></div>`).join('')+`<div style="margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="pill kakao" data-kakao>MOU 혜택 상담</a><a class="pill line" data-sms="MOU 혜택 문의%0A회사: ${esc(hits[0].name)}%0A관심 차종: ">문자로 문의</a></div>`
+    :`<div class="no"><b>‘${esc($('mq').value.trim())}’은(는) 목록에서 찾지 못했어요.</b><p>목록에 없어도 계열사나 협력사로 제휴 대상일 수 있습니다. 회사 이름을 보내주시면 확인해 드립니다.</p><a class="pill kakao" data-kakao>카톡으로 확인 요청</a> <a class="pill line" data-sms="MOU 대상 확인 요청%0A회사: ${esc($('mq').value.trim())}">문자로 확인 요청</a></div>`;
+  bindLinks($('mRes'));
+}
+$('mq').oninput=renderMou;
+
+/* ===== router (#price #stock #report #card #mou) ===== */
+const VIEWS=['price','stock','report','card','mou'];
+const views=[...document.querySelectorAll('main[data-view]')];
+function route(){
+  const h=location.hash.slice(1);const view=VIEWS.includes(h)?h:'home';
+  views.forEach(v=>v.hidden=v.dataset.view!==view);
+  document.querySelectorAll('#gnav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));
+  closeModal();$('mnav').classList.remove('open');
+  if(view!=='home'){window.scrollTo(0,0);return}
+  if(h&&h!=='top'){const el=$(h);if(el)requestAnimationFrame(()=>el.scrollIntoView())}else window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+bindLinks(document);route();
+
+Promise.all([getJSON('data/promo.json'),getJSON('data/stock.json'),getJSON('data/mou.json'),getJSON('data/report.json')]).then(([p,s,m,r])=>{
+  PROMO=p;STOCK=s;MOU=m;REPORT=r;renderPrice();renderStock();renderMou();renderReport();
+});
+</script>
+</body>
+</html>
