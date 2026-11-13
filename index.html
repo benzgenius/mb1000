@@ -58,6 +58,8 @@ main,section,.wrap{max-width:100vw}
 .mnav.open{display:block}
 .mnav a{display:block;font-family:var(--serif);font-size:22px;padding:13px 0;border-bottom:1px solid #222}
 
+.hd .vc{display:flex;flex-direction:column;align-items:flex-end;font-size:11px;line-height:1.35;opacity:.75;white-space:nowrap;flex:none}.hd .vc b{font-weight:500;margin-left:4px}
+@media (max-width:1240px){.hd .vc{margin-left:auto;font-size:10px}}
 /* Hero */
 .hero{position:relative;background:radial-gradient(120% 90% at 70% 40%,#f7f7f7 0%,#e6e6e6 55%,#d9d9d9 100%);overflow:hidden}
 .slide{display:none;min-height:min(74vh,680px)}
@@ -489,6 +491,7 @@ img{-webkit-user-drag:none;pointer-events:auto}
       <a class="pill kakao" data-kakao>카톡 상담</a>
       <a class="pill white" href="#quote">견적 문의</a>
     </div>
+    <div class="vc" id="vc"><span>today<b id="vcT">-</b></span><span>total<b id="vcA">-</b></span></div>
   </div>
 </header>
 <div class="mnav" id="mnav">
@@ -1142,6 +1145,11 @@ bindLinks(document);route();
 Promise.all([getJSON('data/promo.json'),getJSON('data/stock.json'),getJSON('data/mou.json'),getJSON('data/report.json')]).then(([p,s,m,r])=>{
   PROMO=p;STOCK=s;MOU=m;REPORT=r;renderPrice();renderStock();renderMou();renderReport();
 });
+</script>
+<script>
+(function(){try{var B='https://api.counterapi.dev/v1/benzgenius-mb1000/',d=new Date(Date.now()+324e5).toISOString().slice(0,10).replace(/-/g,''),k='vc_'+d,seen=localStorage.getItem(k),sfx=seen?'/':'/up';
+function g(n){return fetch(B+n+sfx).then(function(r){return r.json()}).then(function(j){return j.count||0})}
+Promise.all([g('d'+d),g('total')]).then(function(v){document.getElementById('vcT').textContent=v[0].toLocaleString();document.getElementById('vcA').textContent=v[1].toLocaleString();if(!seen)localStorage.setItem(k,1)}).catch(function(){});}catch(e){}})();
 </script>
 </body>
 </html>
