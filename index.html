@@ -1147,8 +1147,8 @@ Promise.all([getJSON('data/promo.json'),getJSON('data/stock.json'),getJSON('data
 });
 </script>
 <script>
-(function(){try{var B='https://api.counterapi.dev/v1/benzgenius-mb1000/',d=new Date(Date.now()+324e5).toISOString().slice(0,10).replace(/-/g,''),k='vc_'+d,seen=localStorage.getItem(k),sfx=seen?'/':'/up';
-function g(n){return fetch(B+n+sfx).then(function(r){return r.json()}).then(function(j){return j.count||0})}
+(function(){try{var B='https://abacus.jasoncameron.dev/',N='benzgenius-mb1000/',d=new Date(Date.now()+324e5).toISOString().slice(0,10).replace(/-/g,''),k='vc_'+d,seen=localStorage.getItem(k),op=seen?'get/':'hit/';
+function g(n){return fetch(B+op+N+n).then(function(r){return r.ok?r.json():{value:0}}).then(function(j){return +j.value||0})}
 Promise.all([g('d'+d),g('total')]).then(function(v){document.getElementById('vcT').textContent=v[0].toLocaleString();document.getElementById('vcA').textContent=v[1].toLocaleString();if(!seen)localStorage.setItem(k,1)}).catch(function(){});}catch(e){}})();
 </script>
 </body>
