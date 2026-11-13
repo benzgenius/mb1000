@@ -852,8 +852,8 @@ img{-webkit-user-drag:none;pointer-events:auto}
 <script>
 /* ===== 복제 방지 ===== */
 (function(){
-  const ORIGIN='https://benzgenius.github.io/mb1000/';
-  const ALLOWED=['localhost','127.0.0.1','benzgenius.github.io','chunternet-alt.github.io']; /* 직접 산 도메인을 연결하면 여기에 추가 (예: 'benzchunjae.com') */
+  const ORIGIN='https://mb-1000.co.kr/';
+  const ALLOWED=['localhost','mb-1000.co.kr','www.mb-1000.co.kr','127.0.0.1','benzgenius.github.io','chunternet-alt.github.io']; /* 직접 산 도메인을 연결하면 여기에 추가 (예: 'benzchunjae.com') */
   const h=location.hostname;
   const ok=!h||ALLOWED.some(a=>h===a||h.endsWith('.'+a))||/claude|anthropic/.test(h);
   if(!ok){document.addEventListener('DOMContentLoaded',()=>{const d=document.createElement('div');d.className='guard';d.innerHTML='이 페이지는 <b>벤츠천재천재현</b>의 무단 복제본입니다.<br><a href="'+ORIGIN+'" style="color:#fee500;text-decoration:underline">원본 홈페이지로 이동</a>';document.body.innerHTML='';document.body.appendChild(d)})}
